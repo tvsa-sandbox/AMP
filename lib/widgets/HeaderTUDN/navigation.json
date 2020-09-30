@@ -1,0 +1,30 @@
+[
+    {
+        "path": "/liga-mx",
+        "name": "Liga MX"
+    },
+    {
+        "path": "/estadisticas",
+        "name": "ESTADÍSTICAS"
+    },
+    {
+        "path": "/aqui-esta-el-tri",
+        "name": "TRI"
+    },
+    {
+        "path": "/futbol-internacional",
+        "name": "INTERNACIONAL"
+    },
+    {
+        "path": "/mexicanos-en-el-exterior",
+        "name": "MEXICANOS EN EL EXTERIOR"
+    },
+    {
+        "path": "/mas-deportes",
+        "name": "MÁS DEPORTES"
+    },
+    {
+        "path": "/en-vivo",
+        "name": "SHOWS"
+    }
+]

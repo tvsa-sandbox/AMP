@@ -1,0 +1,45 @@
+[
+    {
+        "path": "/tu-tv",
+        "name": "TU TV"
+    },
+    {
+        "path": "/telenovelas",
+        "name": "NOVELAS"
+    },
+    {
+        "path": "/programas",
+        "name": "PROGRAMAS"
+    },
+    {
+        "path": "/reality",
+        "name": "REALITIES"
+    },
+    {
+        "path": "/espectaculos",
+        "name": "ESPECTÁCULOS"
+    },
+    {
+        "path": "/estilo-de-vida",
+        "name": "ESTILOS"
+    },
+    {
+        "path": "/estilo-de-vida/sexo",
+        "name": "SEXO",
+        "subnav": true
+    },
+    {
+        "path": "/estilo-de-vida/viral",
+        "name": "VIRAL",
+        "subnav": true
+    },
+    {
+        "path": "/estilo-de-vida/horoscopos",
+        "name": "HORÓSCOPOS"
+    },
+    {
+        "path": "/en-vivo",
+        "name": "EN VIVO",
+        "live": true
+    }
+]

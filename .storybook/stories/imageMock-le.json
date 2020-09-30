@@ -1,0 +1,161 @@
+{
+    "_type": "Image",
+    "alt": "Angelique Boyer luce espectacular sin una gota de maquillaje y destapa su secreto de belleza",
+    "caption": "Incluso, su novio Sebastián Rulli reaccionó a la publicación y le lanzó un piropo a la actriz: ‘Hermosa’. ",
+    "credit": "Instagram @angeliqueboyer",
+    "original": {
+        "_type": "ImageSize",
+        "height": 1080,
+        "uri": "https://televisa.brightspotcdn.com/da/47/72df72e7408a8b8c21a2f1a32c16/angeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+        "width": 1080
+    },
+    "renditions": {
+        "_type": "Rendition",
+        "aspect16x9": {
+            "_type": "RenditionItem",
+            "large": {
+                "_type": "ImageSize",
+                "height": 461,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/09a5e01/2147483647/strip/true/crop/1080x607+0+85/resize/820x461!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 820
+            },
+            "medium": {
+                "_type": "ImageSize",
+                "height": 403,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/75d1dd6/2147483647/strip/true/crop/1080x608+0+84/resize/716x403!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 716
+            },
+            "thumbnail": {
+                "_type": "ImageSize",
+                "height": 145,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/e960b75/2147483647/strip/true/crop/1080x607+0+85/resize/258x145!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 258
+            },
+            "mobile-large": {
+                "_type": "ImageSize",
+                "height": 233,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/d37ada7/2147483647/strip/true/crop/1080x608+0+84/resize/414x233!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 414
+            },
+            "mobile-small": {
+                "_type": "ImageSize",
+                "height": 114,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/7f83f1f/2147483647/strip/true/crop/1080x589+0+94/resize/209x114!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 209
+            }
+        },
+        "aspect4x3": {
+            "_type": "RenditionItem",
+            "large": {
+                "_type": "ImageSize",
+                "height": 614,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/1a44bde/2147483647/strip/true/crop/1080x811+0+0/resize/818x614!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 818
+            },
+            "medium": {
+                "_type": "ImageSize",
+                "height": 537,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/7136593/2147483647/strip/true/crop/1080x810+0+0/resize/716x537!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 716
+            },
+            "small": {
+                "_type": "ImageSize",
+                "height": 305,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/239ba42/2147483647/strip/true/crop/1080x809+0+0/resize/407x305!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 407
+            },
+            "thumbnail": {
+                "_type": "ImageSize",
+                "height": 202,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/433762a/2147483647/strip/true/crop/1080x814+0+0/resize/268x202!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 268
+            },
+            "mobile-large": {
+                "_type": "ImageSize",
+                "height": 311,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/d12ce53/2147483647/strip/true/crop/1080x811+0+0/resize/414x311!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 414
+            }
+        },
+        "aspect1x1": {
+            "_type": "RenditionItem",
+            "medium": {
+                "_type": "ImageSize",
+                "height": 414,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/eee172c/2147483647/strip/true/crop/1080x1080+0+0/resize/414x414!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 414
+            },
+            "small": {
+                "_type": "ImageSize",
+                "height": 220,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/ab01b01/2147483647/strip/true/crop/1080x1080+0+0/resize/220x220!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 220
+            },
+            "thumbnail": {
+                "_type": "ImageSize",
+                "height": 158,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/16a92b1/2147483647/strip/true/crop/1080x1080+0+0/resize/158x158!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 158
+            }
+        },
+        "aspect9x16": {
+            "_type": "RenditionItem",
+            "medium": {
+                "_type": "ImageSize",
+                "height": 692,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/ca31630/2147483647/strip/true/crop/607x1080+182+0/resize/389x692!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 389
+            }
+        },
+        "aspect3x4": {
+            "_type": "RenditionItem",
+            "medium": {
+                "_type": "ImageSize",
+                "height": 301,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/da00d60/2147483647/strip/true/crop/807x1080+82+0/resize/225x301!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 225
+            },
+            "small": {
+                "_type": "ImageSize",
+                "height": 301,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/da00d60/2147483647/strip/true/crop/807x1080+82+0/resize/225x301!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 225
+            },
+            "mobile-large": {
+                "_type": "ImageSize",
+                "height": 552,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/4a977b2/2147483647/strip/true/crop/810x1080+80+0/resize/414x552!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 414
+            },
+            "mobile-small": {
+                "_type": "ImageSize",
+                "height": 426,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/c831000/2147483647/strip/true/crop/811x1080+80+0/resize/320x426!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 320
+            }
+        },
+        "aspectpanoramic": {
+            "_type": "RenditionItem",
+            "x-large": {
+                "_type": "ImageSize",
+                "height": 612,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/c125e24/2147483647/strip/true/crop/1080x459+0+159/resize/1440x612!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 1440
+            },
+            "medium": {
+                "_type": "ImageSize",
+                "height": 435,
+                "uri": "https://televisa.brightspotcdn.com/dims4/default/313de15/2147483647/strip/true/crop/1080x459+0+159/resize/1024x435!/quality/90/?url=https%3A%2F%2Ftelevisa-brightspot.s3.amazonaws.com%2Fapi%2Fda%2F47%2F72df72e7408a8b8c21a2f1a32c16%2Fangeliqueboyer-79376576-526781834582597-7078339333737664808-n.jpg",
+                "width": 1024
+            }
+        }
+    },
+    "seo": {
+        "_type": "Seo",
+        "description": "Las víctimas de CR7 y Messi en selección nacional",
+        "title": "Cristiano Ronaldo Lionel Messi Selección Argentina Portugal"
+    },
+    "source": "AFP",
+    "title": "Cristiano Ronaldo Lionel Messi Selección Argentina Portugal",
+    "uid": "00000174-798b-d39e-aff4-79bbe9bc0000"
+}
