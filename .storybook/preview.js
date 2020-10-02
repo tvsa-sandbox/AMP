@@ -26,6 +26,7 @@ import * as distrito from "../lib/themes/distritocomedia";
 import GlobalStyle from "../lib/accessories/GlobalStyles";
 import merge from "lodash.merge";
 import get from "lodash.get";
+import css from "./styles";
 
 const wl = whiteLabel;
 const le = lasEstrellas;
@@ -89,7 +90,7 @@ const withThemeProvider = (Story, context) => {
     );
 };
 
-const customStyles = "body{background:#f2f2f2;}"; // some styles
+const customStyles = `${css}`; // `${css}`some styles
 
 export const parameters = {
     amp: {
