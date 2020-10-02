@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { withKnobs } from "@storybook/addon-knobs";
-import { Footer } from "widgets";
+import { Footer, FooterTLJ } from "widgets";
 import { Title, Box } from "accessories";
 
 import FooterAMP from "../../lib/widgets/Footer/FooterAMP";
@@ -24,6 +24,15 @@ export const FOOTERAMP = () => {
         <div>
             <Title variant="h2">Footer AMP</Title>
             <FooterAMP />
+        </div>
+    );
+};
+
+export const FOOTERTLJ = () => {
+    return (
+        <div>
+            <Title variant="h2">FooterTLJ</Title>
+            <FooterTLJ />
         </div>
     );
 };
