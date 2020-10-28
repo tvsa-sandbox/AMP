@@ -38,7 +38,7 @@ export const MATCHITEM = args => {
     return (
         <div>
             <Title variant="h2">MatchItem</Title>
-            <MatchItem ratio={aspect} src={SRC} {...props} />;
+            <MatchItem ratio={aspect} src={SRC} {...props} />
         </div>
     );
 };

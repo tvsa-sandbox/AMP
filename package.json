@@ -16,13 +16,14 @@
         "@babel/cli": "^7.8.4",
         "@babel/core": "^7.8.4",
         "@babel/preset-env": "^7.8.6",
-        "@storybook/addon-actions": "^6.0.22",
-        "@storybook/addon-essentials": "^6.0.22",
-        "@storybook/addon-knobs": "^6.0.22",
-        "@storybook/addon-links": "^6.0.22",
-        "@storybook/addon-storysource": "^6.0.22",
-        "@storybook/react": "^6.0.22",
-        "@storybook/storybook-deployer": "^2.8.6",
+        "@storybook/addon-a11y": "^6.0.27",
+        "@storybook/addon-actions": "^6.0.27",
+        "@storybook/addon-essentials": "^6.0.27",
+        "@storybook/addon-knobs": "^6.0.27",
+        "@storybook/addon-links": "^6.0.27",
+        "@storybook/addon-storysource": "^6.0.27",
+        "@storybook/react": "^6.0.27",
+        "@storybook/storybook-deployer": "^2.8.7",
         "@televisadigital/nxtv-utilities": "1.0.1",
         "@whitespace/storybook-addon-html": "2.0.1",
         "babel-eslint": "^10.0.3",
@@ -40,7 +41,8 @@
         "storybook-amp": "^1.0.13"
     },
     "scripts": {
-        "storybook": "start-storybook --ci -p 3333 -s ./assets",
-        "deploy": "storybook-to-ghpages -s public"
+        "storybook": "start-storybook --ci -p 3333 -s assets",
+        "build-storybook": "build-storybook -s assets",
+        "deploy": "storybook-to-ghpages"
     }
 }

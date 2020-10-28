@@ -85,7 +85,6 @@ IMAGE.argTypes = {
                 "aspect4x3",
                 "aspect3x4",
                 "aspect9x16",
-                "aspect40x17",
                 "aspect1x1",
                 "aspectpanoramic",
             ],
@@ -94,15 +93,7 @@ IMAGE.argTypes = {
     bsp: {
         control: {
             type: "select",
-            options: [
-                "large",
-                "medium",
-                "mobile-large",
-                "thumbnail",
-                "small",
-                "panoramic-x-lage",
-                "x-large",
-            ],
+            options: ["large", "medium", "mobile-large", "thumbnail", "small", "x-large"],
         },
     },
 };

@@ -4,6 +4,6 @@ import logo from "../assets/Whitelabel.png";
 export default create({
     base: "dark",
     brandTitle: "Desing System TVSA",
-    brandUrl: "https://tvsa-sandbox.github.io/widgets-beta/",
+    brandUrl: "https://tvsa-sandbox.github.io/designsystem/",
     brandImage: logo,
 });

@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
+import styled, { css } from "styled-components";
 import { withKnobs, text, select } from "@storybook/addon-knobs";
 
-import { Icons, Title, IconDuration, Box } from "accessories";
+import { Icons, Title, IconDuration, Box, Text } from "accessories";
 
 import iconSetTudn from "../../lib/accessories/Icons/selectiontudn.json";
 import iconSetLe from "../../lib/accessories/Icons/selection.json";
@@ -45,27 +46,129 @@ const iconlist = {
     "Distrito Comedia": iconSetDc.icons,
 };
 
+const BoxIcons = styled(Box)(
+    ({ theme }) => css`
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: auto;
+        @media (min-width: ${theme.breakpoints.xl}) {
+            max-width: 1024px;
+        }
+    `,
+);
+
+const IconsDescription = styled(Box)(
+    ({ theme }) => css`
+        width: 100%;
+        display: block;
+        position: relative;
+        margin-top: ${theme.space.lg};
+        @media (min-width: ${theme.breakpoints.xl}) {
+            max-width: 1024px;
+        }
+    `,
+);
+
+const TitleIcons = styled(Title)(
+    ({ theme }) => css`
+        font-size: ${theme.fontSizes.fxl2};
+        color: ${theme.colors.Dark};
+        padding-left: ${theme.space.lg};
+        padding-right: ${theme.space.lg};
+    `,
+);
+
+const CaptionIcons = styled(Text)(
+    ({ theme }) => css`
+        margin-top: ${theme.space.lg};
+        margin-bottom: ${theme.space.lg};
+        padding-left: ${theme.space.lg};
+        padding-right: ${theme.space.lg};
+        font-size: ${theme.fontSizes.fsm};
+        color: ${theme.colors.Dark};
+    `,
+);
+
+const IconsContainer = styled(Box)(
+    ({ theme }) => css`
+        display: grid;
+        gap: 20px 10px;
+        width: 100%;
+        grid-template-columns: repeat(4, minmax(65px, 1fr));
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto;
+        padding-right: ${theme.space.lg};
+        padding-left: ${theme.space.lg};
+        @media (min-width: ${theme.breakpoints.xl}) {
+            max-width: 1024px;
+            grid-template-columns: repeat(9, minmax(80px, 1fr));
+            gap: 20px 10px;
+        }
+    `,
+);
+
+const IconsDurationStyle = styled(Box)(
+    ({ theme }) => css`
+        display: inline-flex;
+        width: 100%;
+        min-width: 65px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        margin: ${theme.space.auto};
+    `,
+);
+
+const IconsStyle = styled(Box)(
+    ({ theme }) => css`
+        display: inline-flex;
+        border: solid 1px #cccccc;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        margin: ${theme.space.auto};
+        @media (min-width: ${theme.breakpoints.xl}) {
+            width: 80px;
+            height: 80px;
+        }
+    `,
+);
+
 export const ICONS = () => {
     const KEY = Object.keys(select("Iconos", iconlist, iconlist["Las Estrellas"]));
     const Iconame = select("Iconos", iconlist, iconlist["Las Estrellas"]);
-    return (
-        <Fragment>
-            <Title variant="h2">Icons</Title>
-            {KEY.map(key => (
-                <Icons name={Iconame[key].properties.name} key={key} />
-            ))}
-        </Fragment>
-    );
-};
-
-export const ICONDURATION = () => {
     const name = text("Duration", "12:30");
     return (
-        <Fragment>
-            <Title variant="h2">Icon Duration</Title>
-            <Box variant="Transparent" style={{ height: "30px" }}>
-                <IconDuration>{name}</IconDuration>
-            </Box>
+        <Fragment style={{ backgroundColor: "red" }}>
+            <BoxIcons variant="Transparent">
+                <IconsDescription variant="Transparent">
+                    <TitleIcons variant="h2">Icons</TitleIcons>
+                    <CaptionIcons>
+                        In the following lines we will find each of the logos and icons in the user
+                        interface.
+                    </CaptionIcons>
+                </IconsDescription>
+                <IconsContainer variant="Transparent">
+                    {KEY.map(key => (
+                        <IconsStyle variant="Transparent">
+                            <Icons name={Iconame[key].properties.name} key={key} />
+                        </IconsStyle>
+                    ))}
+                </IconsContainer>
+            </BoxIcons>
+            <BoxIcons variant="Transparent">
+                <IconsDescription variant="Transparent">
+                    <TitleIcons variant="h2">Icon Duration</TitleIcons>
+                </IconsDescription>
+                <IconsContainer variant="Transparent">
+                    <IconsDurationStyle variant="Transparent">
+                        <IconDuration>{name}</IconDuration>
+                    </IconsDurationStyle>
+                </IconsContainer>
+            </BoxIcons>
         </Fragment>
     );
 };
