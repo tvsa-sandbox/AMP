@@ -32,7 +32,7 @@ export const EPISODEITEM = args => {
     return (
         <div>
             <Title variant="h2">EpisodeItem</Title>
-            <EpisodeItem ratio={aspect} src={SRC} {...props} />
+            <EpisodeItem ratio={aspect} image={SRC} {...props} />
         </div>
     );
 };
