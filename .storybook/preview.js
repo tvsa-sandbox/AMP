@@ -74,6 +74,7 @@ const THEMES = {
     Unicable: getTheme(modes[0], uni),
     TelevisaCom: getTheme(modes[0], tvsa),
     "Video Digital": getTheme(modes[0], vd),
+    "Video Digital": getTheme(modes[1], vd),
     WhiteLabel: getTheme(modes[0], wl),
     "WhiteLabel Dark": getTheme(modes[1], wl),
     "Los Pleyers": getTheme(modes[0], lp),

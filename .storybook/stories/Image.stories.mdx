@@ -1,0 +1,129 @@
+import { Meta, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+import medium389x692 from "../assets/medium389x692.png";
+import mobileSmall158x158 from "../assets/mobileSmall158x158.png";
+import mobileSmall209x114 from "../assets/mobileSmall209x114.png";
+import mobileSmall225x301 from "../assets/mobileSmall225x301.png";
+import thumbnail268x202 from "../assets/thumbnail268x202.png";
+
+<Meta title="Image" />
+
+<style>{`
+    h1{
+        text-align: left;
+        font-weight: bold;
+    }
+    p {
+        text-align: center;
+        font-size: 12px;
+    }
+    .Aspect{
+        margin-top: 24px;
+        display: block;
+    }
+    .ImageTitle {
+        font-size: 14px;
+        color: #272733;
+        line-height: 18px;
+        text-align: left;
+        border: none;
+    }
+
+  .ImageData {
+        width: 100%;
+        display: block;
+        position: relative;
+        
+  }
+
+  .ImageDescription{
+        font-size: 14px;
+        color: #272733;
+        line-height: 18px;
+        text-align: left;
+  }
+
+    .ImageCaption{
+        text-align: left;
+        
+    }
+
+    .ImageSize{
+        font-size: 14px;
+        color: #272733;
+        line-height: 16px;
+        text-align: left;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1440px){
+        .ImageData {
+            display: grid;
+            gap: 10px;
+            margin: 24px auto;
+            grid-template-columns: repeat(2, 30%);
+            grid-template-rows: repeat(1, minmax(158px, 1fr));
+            justify-content: flex-start;
+            width: 100%;
+            align-items: left;      
+       } 
+    }
+`}</style>
+
+# Aspect Images
+
+<>
+<div class="Aspect">
+    <h2 class="ImageTitle">Aspect de las imagenes 16:9</h2>
+    <p class="ImageDescription">Los siguientes activos muestran las medidas para ser utilizado. HighImpact Centered | Left Item HighImpact Centered | Slider Item HighImpact Justified | Right Item HighImpact Justified | Slider Item Inline Video | Slider Item Inline Video | Carousel Item Six Items Social Follow</p>
+    <div class="ImageData">       
+        <img class="imagen" src={mobileSmall209x114} alt="Colors" />
+        <div class="ImageCaption">
+            <p class="ImageSize">Mobile Large (414 x 233)</p>
+            <p class="ImageSize">Thumbnail (258 x 145)</p>
+            <p class="ImageSize">Thumbnail (258 x 145)</p>
+            <p class="ImageSize">Mobile Small (209 x 114)</p>
+            <p class="ImageSize">Medium (716 x 403)</p>
+        </div>
+    </div>
+    <h2 class="ImageTitle">Aspect de las imagenes 9:16</h2>
+    <p class="ImageDescription">Los siguientes activos muestran las medidas para ser utilizado. HighImpact Full</p>
+        <div class="ImageData"> 
+            <img class="imagen" src={medium389x692} alt="Buttons" />
+            <div class="OptionCaption">
+                <p class="ImageSize">Medium (389 x 692)</p>
+            </div>
+        </div>   
+    <h2 class="ImageTitle">Aspect de las imagenes 4:3</h2>
+    <p class="ImageDescription">Los siguientes activos muestran las medidas para ser utilizado.Five Items HighImpact Full Image Inline Galery | Slider Item Stack</p>
+        <div class="ImageData">
+        <img class="imagen" src={thumbnail268x202} alt="Typography" />
+            <div class="OptionCaption">
+                <p class="ImageSize">Thumbnail (268 x 202)</p>
+                <p class="ImageSize">Small (407 x 305)</p>
+                <p class="ImageSize">Mobile Large (414 x 311)</p>
+                <p class="ImageSize">Medium (716 x 537)</p>
+                <p class="ImageSize">Large (818 x 614)</p>
+            </div>
+        </div>
+    <h2 class="ImageTitle">Aspect de las imagenes 3:4</h2>
+    <p class="ImageDescription">Los siguientes activos muestran las medidas para ser utilizado. Card Person | Carousel Promo Cards | Chapter Promo Cards | Show Promo Cards | Section</p>
+        <div class="ImageData">
+        <img class="imagen" src={mobileSmall225x301} alt="Grid" />
+            <div class="OptionCaption">
+                <p class="ImageSize">Mobile Small (225 x 301)</p>
+                <p class="ImageSize">Mobile Small (320 x 426)</p>
+                <p class="ImageSize">Mobile Small (414 x 552)</p>
+            </div>
+        </div>   
+    <h2 class="ImageTitle">Aspect de las imagenes 1:1</h2>
+    <p class="ImageDescription">Los siguientes activos muestran las medidas para ser utilizado HightImpact Centered Profile Follow Four Items</p>
+        <div class="ImageData">
+        <img class="imagen" src={mobileSmall158x158} alt="Input" />
+            <div class="OptionCaption">
+                <p class="ImageSize">Mobile Small (220 x 220)</p>
+                <p class="ImageSize">Mobile Small (158 x 158)</p>
+                <p class="ImageSize">Mobile Small (414 x 414)</p>
+            </div>
+        </div>
+</div>
+</>
+

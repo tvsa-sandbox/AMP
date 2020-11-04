@@ -28,7 +28,7 @@ export const LEAGUECAROUSEL = args => {
     return (
         <div>
             <Title variant="h2">LeagueCarousel</Title>
-            <Box my="lg">
+            <Box>
                 <LeagueCarousel>
                     <Carousel arrow="Back">
                         <LeagueCarouselThumb>

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
 import { withKnobs, text, select } from "@storybook/addon-knobs";
 
-import { Icons, Title, IconDuration, Box, Text } from "accessories";
+import { Icons, Title, IconDuration, Box, Text, Info } from "accessories";
 
 import iconSetTudn from "../../lib/accessories/Icons/selectiontudn.json";
 import iconSetLe from "../../lib/accessories/Icons/selection.json";
@@ -20,6 +20,11 @@ import iconSetOink from "../../lib/accessories/Icons/selectionoinkoink.json";
 import iconSetPlyr from "../../lib/accessories/Icons/selectionpleyers.json";
 import iconSetPlm from "../../lib/accessories/Icons/selectionplumas.json";
 import iconSetVc from "../../lib/accessories/Icons/selectionviviendoencasa.json";
+import iconSetTvsa from "../../lib/accessories/Icons/selectiontelevisacom.json";
+import iconSetSl from "../../lib/accessories/Icons/selectionslang.json";
+import iconSetNews from "../../lib/accessories/Icons/selectionnews.json";
+import iconSetVD from "../../lib/accessories/Icons/selectionvideodigital.json";
+import iconSetWL from "../../lib/accessories/Icons/selectionwhitelabel.json";
 
 export default {
     decorators: [withKnobs],
@@ -34,7 +39,7 @@ const iconlist = {
     "El Nueve": iconSetC9.icons,
     Telehit: iconSetTht.icons,
     Unicable: iconSetUnc.icons,
-    "White Label": iconSetLe.icons,
+    "White Label": iconSetWL.icons,
     "Los Pleyers": iconSetPlyr.icons,
     "Plumas Atomicas": iconSetPlm.icons,
     Erizos: iconSetEzs.icons,
@@ -44,6 +49,10 @@ const iconlist = {
     "Oink Oink": iconSetOink.icons,
     "Viviendo Casa": iconSetVc.icons,
     "Distrito Comedia": iconSetDc.icons,
+    TelevisaCom: iconSetTvsa.icons,
+    Slang: iconSetSl.icons,
+    "Televisa News": iconSetNews.icons,
+    "Video Digital": iconSetVD.icons,
 };
 
 const BoxIcons = styled(Box)(
@@ -87,9 +96,15 @@ const CaptionIcons = styled(Text)(
         padding-right: ${theme.space.lg};
         font-size: ${theme.fontSizes.fsm};
         color: ${theme.colors.Dark};
+        line-height: ${theme.lineHeights.lsm};
     `,
 );
 
+const IconsBox = styled(Box)`
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+`;
 const IconsContainer = styled(Box)(
     ({ theme }) => css`
         display: grid;
@@ -101,6 +116,11 @@ const IconsContainer = styled(Box)(
         margin: 15px auto;
         padding-right: ${theme.space.lg};
         padding-left: ${theme.space.lg};
+        @media (min-width: ${theme.breakpoints.md}) {
+            max-width: 768px;
+            grid-template-columns: repeat(8, minmax(80px, 1fr));
+            gap: 20px 10px;
+        }
         @media (min-width: ${theme.breakpoints.xl}) {
             max-width: 1024px;
             grid-template-columns: repeat(9, minmax(80px, 1fr));
@@ -115,11 +135,18 @@ const IconsDurationStyle = styled(Box)(
         width: 100%;
         min-width: 65px;
         height: 30px;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        margin: ${theme.space.auto};
+        padding-left: ${theme.space.lg};
     `,
 );
+
+const IconsInfo = styled(Info)`
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+`;
 
 const IconsStyle = styled(Box)(
     ({ theme }) => css`
@@ -129,7 +156,11 @@ const IconsStyle = styled(Box)(
         height: 50px;
         justify-content: center;
         align-items: center;
-        margin: ${theme.space.auto};
+        margin: ${theme.space.sm};
+        @media (min-width: ${theme.breakpoints.md}) {
+            width: 60px;
+            height: 60px;
+        }
         @media (min-width: ${theme.breakpoints.xl}) {
             width: 80px;
             height: 80px;
@@ -142,10 +173,10 @@ export const ICONS = () => {
     const Iconame = select("Iconos", iconlist, iconlist["Las Estrellas"]);
     const name = text("Duration", "12:30");
     return (
-        <Fragment style={{ backgroundColor: "red" }}>
+        <Fragment>
             <BoxIcons variant="Transparent">
                 <IconsDescription variant="Transparent">
-                    <TitleIcons variant="h2">Icons</TitleIcons>
+                    <TitleIcons variant="h1">Icons</TitleIcons>
                     <CaptionIcons>
                         In the following lines we will find each of the logos and icons in the user
                         interface.
@@ -153,21 +184,22 @@ export const ICONS = () => {
                 </IconsDescription>
                 <IconsContainer variant="Transparent">
                     {KEY.map(key => (
-                        <IconsStyle variant="Transparent">
-                            <Icons name={Iconame[key].properties.name} key={key} />
-                        </IconsStyle>
+                        <IconsBox variant="Transparent" key={key}>
+                            <IconsStyle variant="Transparent">
+                                <Icons name={Iconame[key].properties.name} />
+                            </IconsStyle>
+                            <IconsInfo>{Iconame[key].properties.name}</IconsInfo>
+                        </IconsBox>
                     ))}
                 </IconsContainer>
             </BoxIcons>
             <BoxIcons variant="Transparent">
                 <IconsDescription variant="Transparent">
-                    <TitleIcons variant="h2">Icon Duration</TitleIcons>
+                    <TitleIcons variant="h1">Icon Duration</TitleIcons>
                 </IconsDescription>
-                <IconsContainer variant="Transparent">
-                    <IconsDurationStyle variant="Transparent">
-                        <IconDuration>{name}</IconDuration>
-                    </IconsDurationStyle>
-                </IconsContainer>
+                <IconsDurationStyle variant="Transparent">
+                    <IconDuration>{name}</IconDuration>
+                </IconsDurationStyle>
             </BoxIcons>
         </Fragment>
     );

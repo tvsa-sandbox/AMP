@@ -3,7 +3,7 @@ import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { ItemCarousel } from "items";
 import { ContentCarousel } from "widgets";
-import { Title, Box } from "accessories";
+import Title from "accessories/Title";
 import { ContentCarouselThumbStyles } from "../../lib/widgets/ContentCarousel/styles";
 export default {
     decorators: [withKnobs],
