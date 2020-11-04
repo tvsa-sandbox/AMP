@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
+import extractCSS from "../../lib/helpers/cssextractor";
 
 import { Button, Title, Box, Icons, Text, Info } from "accessories";
 
