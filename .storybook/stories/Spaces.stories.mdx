@@ -1,0 +1,130 @@
+import { Meta, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+
+<Meta title="Space" />
+
+<style>{`
+  h1{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 32px;
+    border-bottom: none;
+  }
+
+  p {    
+      font-size: 12px;
+  }
+
+  .Spaces{
+        margin-top: 24px;
+        display: block;
+    }
+
+  .SpacesList {
+    padding: 0px;
+    max-width: 250px;
+  }
+    
+  li {
+      display: flex;
+      height: 60px;
+      align-items: center;
+      width: 100%;
+      border-bottom: 1px solid #cccccc;
+      justify-content: space-between;
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      line-height: 2;
+  }
+
+  .SpaceA {
+      background: #596173;
+      width:3px;
+      height:3px;
+    }
+
+  .SpaceB {
+      background: #596173;
+      width:6px;
+      height:6px;
+    }
+
+  .SpaceC {
+      background: #596173;
+      width:9px;
+      height:9px;
+    }
+
+  .SpaceD {
+      background: #596173;
+      width:12px;
+      height:12px;
+    }
+
+  .SpaceE {
+      background: #596173;
+      width:15px;
+      height:15px;
+    }
+
+  .SpaceF {
+      background: #596173;
+      width:18px;
+      height:18px;
+    }
+
+  .SpaceG {
+      background: #596173;
+      width:24px;
+      height:24px;
+    }
+
+  .SpaceH {
+      background: #596173;
+      width:36px;
+      height:36px;
+    }
+
+  .SpaceI {
+      background: #596173;
+      width:48px;
+      height:48px;
+    }
+`}</style>
+
+# Spacing
+
+A grid and spacing makes it easy for users to scan the interface and capture the content.
+
+<>
+<div class="Spaces">
+    <ul class="SpacesList">
+        <li>
+            3px xtra small space <div class="SpaceA"></div>
+        </li>
+        <li>
+            6px small space <div class="SpaceB"></div>
+        </li>
+        <li>
+            9px medium space <div class="SpaceC"></div>
+        </li>
+        <li>
+            12px base space <div class="SpaceD"></div>
+        </li>
+        <li>
+            15px large space <div class="SpaceE"></div>
+        </li>
+        <li>
+            18px xtra large space <div class="SpaceF"></div>
+        </li>
+        <li>
+            24px 1xtra large space <div class="SpaceG"></div>
+        </li>
+        <li>
+            36px 2xtra large space <div class="SpaceH"></div>
+        </li>
+        <li>
+            48px 3xtra large space <div class="SpaceI"></div>
+        </li>
+    </ul>
+</div>
+</>
