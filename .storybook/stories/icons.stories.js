@@ -116,6 +116,7 @@ const IconsContainer = styled(Box)(
         margin: 15px auto;
         padding-right: ${theme.space.lg};
         padding-left: ${theme.space.lg};
+        margin-bottom: ${theme.space.xl3};
         @media (min-width: ${theme.breakpoints.md}) {
             max-width: 768px;
             grid-template-columns: repeat(8, minmax(80px, 1fr));

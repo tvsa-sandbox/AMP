@@ -39,7 +39,7 @@ export const TICKER = args => {
         <div>
             <Title variant="h2">Ticker</Title>
             <Ticker>
-                <Carousel>
+                <Carousel arrow="Back">
                     <ContentCarouselThumbStyles>
                         <TickerItem ratio="aspect16x9" image={SRC} />
                     </ContentCarouselThumbStyles>

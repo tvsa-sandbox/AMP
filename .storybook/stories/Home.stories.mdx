@@ -5,6 +5,8 @@ import icons from "../assets/Tech_Life_Media.png";
 import colors from "../assets/Tech_Life_Management.png";
 import typo from "../assets/Tech_Life_Remote.png";
 import inputs from "../assets/Tech_Life_Virtual_Reality.png";
+import aspect from "../assets/Tech-Life-MediaImg.png";
+import box from "../assets/Tech-Life-Mediabox.png";
 
 <Meta title="Home" />
 
@@ -20,7 +22,7 @@ import inputs from "../assets/Tech_Life_Virtual_Reality.png";
         display: grid;
         gap: 20px 10px;
         grid-template-columns: repeat(2, 45%);
-        grid-template-rows: repeat(3, minmax(120px, 1fr));
+        grid-template-rows: repeat(4, minmax(120px, 1fr));
         justify-content: center;
         width: 100%;
         align-items: center;
@@ -55,13 +57,13 @@ import inputs from "../assets/Tech_Life_Virtual_Reality.png";
         line-height: 14px;
     }
 
-    @media (min-width: 1024px) and (max-width: 1440px){
+    @media (min-width: 1024px){
         .Options {
         display: grid;
         gap: 20px 30px;
         margin: 24px auto;
         grid-template-columns: repeat(3, 30%);
-        grid-template-rows: repeat(2, 50%);
+        grid-template-rows: repeat(3, 30%);
         justify-content: center;
         width: 100%;
         align-items: center;
@@ -76,7 +78,7 @@ A Design System for business products. Creating an efficient and pleasant work e
 
 <>
 <div class="Options">
-    <a class="OptionHome" href="/">
+    <a class="OptionHome" href="/?path=/story/desing-system-atoms-color--color">
     <img class="imagen" src={colors} alt="Colors" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Colors</h3>
@@ -88,13 +90,13 @@ A Design System for business products. Creating an efficient and pleasant work e
     <h3 class="OptionTitle">Buttons</h3>
     </div>
     </a>
-    <a class="OptionHome" href="/">
+    <a class="OptionHome" href="/?path=/story/desing-system-atoms-typography--title">
     <img class="imagen" src={typo} alt="Typography" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Typography</h3>
     </div>
     </a>
-    <a class="OptionHome" href="/">
+    <a class="OptionHome" href="/?path=/story/space-grid--page">
     <img class="imagen" src={spaces} alt="Grid" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Space & Grid</h3>
@@ -112,8 +114,18 @@ A Design System for business products. Creating an efficient and pleasant work e
     <h3 class="OptionTitle">Icons</h3>
     </div>
     </a>
-
-
+    <a class="OptionHome" href="/?path=/story/image--page">
+    <img class="imagen" src={aspect} alt="Aspect" />
+    <div class="OptionCaption">
+    <h3 class="OptionTitle">Image</h3>
+    </div>
+    </a>
+    <a class="OptionHome" href="/?path=/story/desing-system-atoms-box--box">
+    <img class="imagen" src={box} alt="Box" />
+    <div class="OptionCaption">
+    <h3 class="OptionTitle">Box</h3>
+    </div>
+    </a>
 </div>
 </>
 

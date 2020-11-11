@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
-import { ItemLeague } from "items";
-import { Title, Box, Carousel } from "accessories";
+import { Title, Box } from "accessories";
 import { LeagueCarousel } from "widgets";
-import { LeagueCarouselThumb } from "../../lib/widgets/LeagueCarousel/styles";
+
 export default {
     decorators: [withKnobs],
     title: "Desing System/Widgets/LeagueCarousel",
@@ -28,20 +27,8 @@ export const LEAGUECAROUSEL = args => {
     return (
         <div>
             <Title variant="h2">LeagueCarousel</Title>
-            <Box>
-                <LeagueCarousel>
-                    <Carousel arrow="Back">
-                        <LeagueCarouselThumb>
-                            <ItemLeague />
-                        </LeagueCarouselThumb>
-                        <LeagueCarouselThumb>
-                            <ItemLeague />
-                        </LeagueCarouselThumb>
-                        <LeagueCarouselThumb>
-                            <ItemLeague />
-                        </LeagueCarouselThumb>
-                    </Carousel>
-                </LeagueCarousel>
+            <Box my="lg" variant="Transparent">
+                <LeagueCarousel />
             </Box>
         </div>
     );

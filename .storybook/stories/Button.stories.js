@@ -67,6 +67,7 @@ const ButtonsContainer = styled(Box)(
         margin: 15px auto;
         padding-right: ${theme.space.lg};
         padding-left: ${theme.space.lg};
+        margin-bottom: ${theme.space.xl3};
         @media (min-width: ${theme.breakpoints.md}) {
             max-width: 768px;
             grid-template-columns: repeat(2, 1fr);
@@ -87,6 +88,7 @@ const ButtonTypeBox = styled(Info)(
         display: inline-flex;
         color: #272733;
         align-items: center;
+        padding-left: ${theme.space.lg};
     `,
 );
 

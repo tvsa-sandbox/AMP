@@ -76,6 +76,9 @@ const ColorStyle = styled(Box)(
         min-height: 350px;
         padding-right: ${theme.space.lg};
         padding-left: ${theme.space.lg};
+        @media (min-width: ${theme.breakpoints.xl}) {
+            padding-left: ${theme.space.lg};
+        }
     `,
 );
 
@@ -86,6 +89,9 @@ const ColorStyleForm = styled(Box)(
         min-height: 350px;
         padding-right: ${theme.space.lg};
         padding-left: ${theme.space.lg};
+        @media (min-width: ${theme.breakpoints.xl}) {
+            padding-left: ${theme.space.zero};
+        }
     `,
 );
 
@@ -110,6 +116,7 @@ const ColorsType = styled(Title)(
 const ColorDrop = styled(Color)(
     ({ theme }) => css`
         margin-left: ${theme.space.zero};
+        border: 1px #cccccc solid;
     `,
 );
 
