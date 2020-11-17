@@ -13,7 +13,7 @@ export default {
 };
 
 export const CHAPTERITEM = args => {
-    const { aspect = "aspect16x9", bsp = "medium" } = args;
+    const { aspect = "aspect16x9", bsp = "mobile-large" } = args;
     const SOURCES = [
         {
             aspect,

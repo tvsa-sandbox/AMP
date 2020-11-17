@@ -92,7 +92,7 @@ const THEMES = {
 
 const withThemeProvider = (Story, context) => {
     return (
-        <ThemeProvider theme={select("Theme", THEMES, THEMES["Las Estrellas Light"])}>
+        <ThemeProvider theme={select("Theme", THEMES, THEMES["Video Digital"])}>
             <GlobalStyle />
             <Story {...context} />
         </ThemeProvider>

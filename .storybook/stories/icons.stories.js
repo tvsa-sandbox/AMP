@@ -61,6 +61,7 @@ const BoxIcons = styled(Box)(
         display: block;
         position: relative;
         margin: auto;
+        margin-bottom: ${theme.space.xl3};
         @media (min-width: ${theme.breakpoints.xl}) {
             max-width: 1024px;
         }
@@ -73,6 +74,7 @@ const IconsDescription = styled(Box)(
         display: block;
         position: relative;
         margin-top: ${theme.space.lg};
+        margin-bottom: ${theme.space.xxl};
         @media (min-width: ${theme.breakpoints.xl}) {
             max-width: 1024px;
         }
@@ -90,13 +92,12 @@ const TitleIcons = styled(Title)(
 
 const CaptionIcons = styled(Text)(
     ({ theme }) => css`
-        margin-top: ${theme.space.lg};
-        margin-bottom: ${theme.space.lg};
+        padding-top: ${theme.space.lg};
         padding-left: ${theme.space.lg};
         padding-right: ${theme.space.lg};
         font-size: ${theme.fontSizes.fsm};
         color: ${theme.colors.Dark};
-        line-height: ${theme.lineHeights.lsm};
+        line-height: ${theme.lineHeights.llg};
     `,
 );
 
@@ -113,12 +114,10 @@ const IconsContainer = styled(Box)(
         grid-template-columns: repeat(4, minmax(65px, 1fr));
         justify-content: center;
         align-items: center;
-        margin: 15px auto;
-        padding-right: ${theme.space.lg};
-        padding-left: ${theme.space.lg};
+        padding-right: ${theme.space.xs};
+        padding-left: ${theme.space.xs};
         margin-bottom: ${theme.space.xl3};
         @media (min-width: ${theme.breakpoints.md}) {
-            max-width: 768px;
             grid-template-columns: repeat(8, minmax(80px, 1fr));
             gap: 20px 10px;
         }
@@ -139,15 +138,19 @@ const IconsDurationStyle = styled(Box)(
         justify-content: flex-start;
         align-items: center;
         padding-left: ${theme.space.lg};
+        padding-top: ${theme.space.xxl};
     `,
 );
 
-const IconsInfo = styled(Info)`
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-`;
+const IconsInfo = styled(Info)(
+    ({ theme }) => css`
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        color: ${theme.colors.graycataloge};
+    `,
+);
 
 const IconsStyle = styled(Box)(
     ({ theme }) => css`

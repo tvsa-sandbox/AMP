@@ -28,6 +28,7 @@ const ColorDescription = styled(Box)(
         display: block;
         position: relative;
         margin-top: ${theme.space.lg};
+        margin-bottom: ${theme.space.xxl};
         @media (min-width: ${theme.breakpoints.xl}) {
             max-width: 1024px;
         }
@@ -45,13 +46,12 @@ const TitleColors = styled(Title)(
 
 const CaptionColors = styled(Text)(
     ({ theme }) => css`
-        margin-top: ${theme.space.lg};
-        margin-bottom: ${theme.space.lg};
+        padding-top: ${theme.space.lg};
         padding-left: ${theme.space.lg};
         padding-right: ${theme.space.lg};
         font-size: ${theme.fontSizes.fsm};
         color: ${theme.colors.Dark};
-        line-height: ${theme.lineHeights.lsm};
+        line-height: ${theme.lineHeights.llg};
     `,
 );
 
@@ -59,12 +59,11 @@ const ColorContainer = styled(Box)(
     ({ theme }) => css`
         display: block;
         width: 100%;
-        padding-right: ${theme.space.lg};
         @media (min-width: ${theme.breakpoints.xl}) {
             display: flex;
+            align-items: flex-start;
             max-width: 1024px;
-            padding-right: ${theme.space.lg};
-            padding-left: ${theme.space.lg};
+            margin-top: ${theme.space.xxl};
         }
     `,
 );
@@ -76,9 +75,6 @@ const ColorStyle = styled(Box)(
         min-height: 350px;
         padding-right: ${theme.space.lg};
         padding-left: ${theme.space.lg};
-        @media (min-width: ${theme.breakpoints.xl}) {
-            padding-left: ${theme.space.lg};
-        }
     `,
 );
 
@@ -89,27 +85,30 @@ const ColorStyleForm = styled(Box)(
         min-height: 350px;
         padding-right: ${theme.space.lg};
         padding-left: ${theme.space.lg};
-        @media (min-width: ${theme.breakpoints.xl}) {
-            padding-left: ${theme.space.zero};
-        }
-    `,
-);
-
-const SubTitleColors = styled(Text)(
-    ({ theme }) => css`
-        font-size: ${theme.fontSizes.fsm};
-        color: ${theme.colors.Dark};
     `,
 );
 
 const ColorsType = styled(Title)(
     ({ theme }) => css`
-        font-size: ${theme.fontSizes.fsm};
-        color: ${theme.colors.Dark};
+        font-size: ${theme.fontSizes.fbase};
+        color: ${theme.colors.graycataloge};
         line-height: ${theme.lineHeights.lsm};
         text-align: left;
         padding-bottom: ${theme.space.lg};
-        padding-top: ${theme.space.lg};
+    `,
+);
+
+const ColorDescriptionContainer = styled(Box)(
+    ({ theme }) => css`
+        margin-bottom: ${theme.space.xxl};
+    `,
+);
+
+const SubTitleColors = styled(Text)(
+    ({ theme }) => css`
+        font-size: ${theme.fontSizes.fmd};
+        color: ${theme.colors.graycataloge};
+        padding-bottom: ${theme.space.base};
     `,
 );
 
@@ -134,29 +133,45 @@ export const COLOR = () => {
             <ColorContainer variant="Transparent">
                 <ColorStyle variant="Transparent">
                     <ColorsType variant="h2">Theme Colors </ColorsType>
-                    <SubTitleColors variant="h2">Interaction Color</SubTitleColors>
-                    <ColorDrop />
 
-                    <SubTitleColors variant="h3">Secondary Color</SubTitleColors>
-                    <ColorDrop variant="Secondary" />
+                    <ColorDescriptionContainer variant="Transparent">
+                        <SubTitleColors variant="h2">Interaction Color</SubTitleColors>
+                        <ColorDrop />
+                    </ColorDescriptionContainer>
 
-                    <SubTitleColors variant="h3">White</SubTitleColors>
-                    <ColorDrop variant="White" />
+                    <ColorDescriptionContainer variant="Transparent">
+                        <SubTitleColors variant="h3">Secondary Color</SubTitleColors>
+                        <ColorDrop variant="Secondary" />
+                    </ColorDescriptionContainer>
 
-                    <SubTitleColors variant="h3">Black</SubTitleColors>
-                    <ColorDrop variant="Black" />
+                    <ColorDescriptionContainer variant="Transparent">
+                        <SubTitleColors variant="h3">White</SubTitleColors>
+                        <ColorDrop variant="White" />
+                    </ColorDescriptionContainer>
+
+                    <ColorDescriptionContainer variant="Transparent">
+                        <SubTitleColors variant="h3">Black</SubTitleColors>
+                        <ColorDrop variant="Black" />
+                    </ColorDescriptionContainer>
                 </ColorStyle>
 
                 <ColorStyleForm variant="Transparent">
                     <ColorsType variant="h2">Form Colors </ColorsType>
-                    <SubTitleColors variant="h3">Done</SubTitleColors>
-                    <ColorDrop variant="Done" />
 
-                    <SubTitleColors variant="h3">Warning</SubTitleColors>
-                    <ColorDrop variant="Warning" />
+                    <ColorDescriptionContainer variant="Transparent">
+                        <SubTitleColors variant="h3">Done</SubTitleColors>
+                        <ColorDrop variant="Done" />
+                    </ColorDescriptionContainer>
 
-                    <SubTitleColors variant="h3">Error</SubTitleColors>
-                    <ColorDrop variant="Error" />
+                    <ColorDescriptionContainer variant="Transparent">
+                        <SubTitleColors variant="h3">Warning</SubTitleColors>
+                        <ColorDrop variant="Warning" />
+                    </ColorDescriptionContainer>
+
+                    <ColorDescriptionContainer variant="Transparent">
+                        <SubTitleColors variant="h3">Error</SubTitleColors>
+                        <ColorDrop variant="Error" />
+                    </ColorDescriptionContainer>
                 </ColorStyleForm>
             </ColorContainer>
         </BoxColor>

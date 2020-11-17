@@ -27,6 +27,7 @@ const BoxDescription = styled(Box)(
         display: block;
         position: relative;
         margin-top: ${theme.space.lg};
+        margin-bottom: ${theme.space.xxl};
         @media (min-width: ${theme.breakpoints.xl}) {
             max-width: 1024px;
         }
@@ -39,18 +40,17 @@ const BoxTitle = styled(Title)(
         color: ${theme.colors.Dark};
         padding-left: ${theme.space.lg};
         padding-right: ${theme.space.lg};
+        padding-bottom: ${theme.space.lg};
     `,
 );
 
 const BoxCaption = styled(Text)(
     ({ theme }) => css`
-        margin-top: ${theme.space.lg};
-        margin-bottom: ${theme.space.lg};
         padding-left: ${theme.space.lg};
         padding-right: ${theme.space.lg};
         font-size: ${theme.fontSizes.fsm};
         color: ${theme.colors.Dark};
-        line-height: ${theme.lineHeights.lsm};
+        line-height: ${theme.lineHeights.llg};
     `,
 );
 
@@ -58,7 +58,6 @@ const BoxContent = styled(Box)(
     ({ theme }) => css`
         display: block;
         width: 100%;
-        margin: auto;
         padding-left: ${theme.space.lg};
         @media (min-width: ${theme.breakpoints.xl}) {
             max-width: 1024px;
@@ -74,6 +73,7 @@ const BoxType = styled(Box)(
         height: 100px;
         background-color: ${theme.colors.Dark};
         margin-left: 0px;
+        margin-bottom: ${theme.space.xxl};
         @media (min-width: ${theme.breakpoints.xl}) {
             max-width: 600px;
         }
@@ -92,7 +92,7 @@ const BoxTransparent = styled(Box)(
 
 const SubTitleBox = styled(Text)(
     ({ theme }) => css`
-        font-size: ${theme.fontSizes.fsm};
+        font-size: ${theme.fontSizes.fmd};
         color: ${theme.colors.Light};
         padding: ${theme.space.lg};
     `,
@@ -100,7 +100,7 @@ const SubTitleBox = styled(Text)(
 
 const SubTitleTransparent = styled(Text)(
     ({ theme }) => css`
-        font-size: ${theme.fontSizes.fsm};
+        font-size: ${theme.fontSizes.fmd};
         color: ${theme.colors.Dark};
         padding: ${theme.space.lg};
     `,

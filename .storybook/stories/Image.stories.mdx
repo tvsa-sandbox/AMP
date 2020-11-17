@@ -11,38 +11,47 @@ import thumbnail268x202 from "../assets/thumbnail268x202.png";
     h1{
         text-align: left;
         font-weight: bold;
+        font-size: 32px;
     }
     p {
         text-align: center;
-        font-size: 12px;
+        font-size: 14px;
+        line-height: 24px;
     }
     .Aspect{
         margin-top: 24px;
         display: block;
     }
+    .ImageAspects{
+      margin: 0px auto 48px auto;
+
+    }
     .ImageTitle {
-        font-size: 14px;
+        font-size: 18px;
         color: #272733;
         line-height: 18px;
         text-align: left;
         border: none;
-    }
-    .OptionCaption{
-        padding-left: 15px;
+        padding: 0px;
+        margin: 0px;
     }
 
   .ImageData {
         width: 100%;
         display: block;
         position: relative;
+        min-width: 270px;
         
   }
 
   .ImageDescription{
-        font-size: 14px;
         color: #272733;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 24px;
         text-align: left;
+        padding-top: 15px;
+        padding-bottom: 24px;
+        margin: 0px auto;
   }
 
     .ImageCaption{
@@ -56,77 +65,288 @@ import thumbnail268x202 from "../assets/thumbnail268x202.png";
         line-height: 16px;
         text-align: left;
     }
+    .AspectWidgets{
+        width: 100%;
+    }
+    .Widgets {
+      display: block;
+      margin-top: 15px;
+    }
+   .Widgets td:first-child {
+      width: 100px;
+    }
+    .Widgets td:nth-child(2) {
+      width: 300px;
+    }
 
     @media (min-width: 1024px){
         .ImageData {
             display: grid;
             gap: 10px;
-            margin: 24px auto;
-            grid-template-columns: repeat(2, 30%);
-            grid-template-rows: repeat(1, minmax(158px, 1fr));
+            padding: 24px auto;
+            grid-template-columns: repeat(2, 40%);
+            grid-template-rows: repeat(1, minmax(300px, 1fr));
             justify-content: flex-start;
             width: 100%;
             align-items: left;      
        } 
+       .Widgets {
+        display: block;
+        margin-top:0px;
+      }
     }
 `}</style>
 
 # Aspect Images
 
 <>
-<div class="Aspect">
-    <h2 class="ImageTitle">Aspect de las imagenes 16:9</h2>
-    <p class="ImageDescription">Los siguientes activos muestran las medidas para ser utilizado. HighImpact Centered | Left Item HighImpact Centered | Slider Item HighImpact Justified | Right Item HighImpact Justified | Slider Item Inline Video | Slider Item Inline Video | Carousel Item Six Items Social Follow</p>
-    <div class="ImageData">       
-        <img class="imagen" src={mobileSmall209x114} alt="Colors" />
-        <div class="OptionCaption">
-            <p class="ImageSize">Mobile Large (414 x 233)</p>
-            <p class="ImageSize">Thumbnail (258 x 145)</p>
-            <p class="ImageSize">Thumbnail (258 x 145)</p>
-            <p class="ImageSize">Mobile Small (209 x 114)</p>
-            <p class="ImageSize">Medium (716 x 403)</p>
-        </div>
+  <div class="Aspect">
+  <div class="ImageAspects">
+    <h2 class="ImageTitle">Aspect Image 16:9</h2>
+    <p class="ImageDescription">
+      The following assets show the measures to be used for the sources of the
+      different widgets.
+    </p>
+    <div class="ImageData">
+      <img class="imagen" src={mobileSmall209x114} alt="Colors" />
+      <div class="OptionCaption">
+        <table class="Widgets">
+          <tr >
+            <th>Measure</th>
+            <th>Widgets</th>
+          </tr>
+          <tr>
+            <td>258x145</td>
+            <td>
+              <ul>
+                <li>Inline Video | Carousel Item</li>
+                <li>Social Follow</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>414x233</td>
+            <td>
+              <ul>
+                <li>HighImpact Centered |Slider Item</li>
+                <li>HighImpact Justified | Right Item</li>
+                <li>HighImpact Justified | Slider Item </li>
+                <li>Inline Video | Slider Item</li>
+                <li>Inline Video | Carousel Item</li>
+                <li>Six Items</li>
+                <li>Social Follow</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>716x403</td>
+            <td>
+            <ul>
+                <li>HighImpact Centered | Left Item </li>
+                <li>HighImpact Centered |
+              Slider Item</li>
+                <li>HighImpact Justified | Right Item </li>
+                <li>HighImpact Justified | Slider Item</li>
+                <li>Inline Video | Slider
+              Item</li>
+                <li>Inline Video | Carousel Item</li>
+                <li>Social Follow</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>820x461</td>
+            <td>
+            <ul>
+                <li>HighImpact Centered | Slider Item</li>
+                <li>HighImpact Justified Left
+              | Slider Item</li>
+                <li>HighImpact Justified Left
+              | Slider Item</li>
+                <li>Six
+              Items</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
-    <h2 class="ImageTitle">Aspect de las imagenes 9:16</h2>
-    <p class="ImageDescription">Los siguientes activos muestran las medidas para ser utilizado. HighImpact Full</p>
-        <div class="ImageData"> 
-            <img class="imagen" src={medium389x692} alt="Buttons" />
-            <div class="OptionCaption">
-                <p class="ImageSize">Medium (389 x 692)</p>
-            </div>
-        </div>   
-    <h2 class="ImageTitle">Aspect de las imagenes 4:3</h2>
-    <p class="ImageDescription">Los siguientes activos muestran las medidas para ser utilizado.Five Items HighImpact Full Image Inline Galery | Slider Item Stack</p>
-        <div class="ImageData">
-        <img class="imagen" src={thumbnail268x202} alt="Typography" />
-            <div class="OptionCaption">
-                <p class="ImageSize">Thumbnail (268 x 202)</p>
-                <p class="ImageSize">Small (407 x 305)</p>
-                <p class="ImageSize">Mobile Large (414 x 311)</p>
-                <p class="ImageSize">Medium (716 x 537)</p>
-                <p class="ImageSize">Large (818 x 614)</p>
-            </div>
-        </div>
-    <h2 class="ImageTitle">Aspect de las imagenes 3:4</h2>
-    <p class="ImageDescription">Los siguientes activos muestran las medidas para ser utilizado. Card Person | Carousel Promo Cards | Chapter Promo Cards | Show Promo Cards | Section</p>
-        <div class="ImageData">
-        <img class="imagen" src={mobileSmall225x301} alt="Grid" />
-            <div class="OptionCaption">
-                <p class="ImageSize">Mobile Small (225 x 301)</p>
-                <p class="ImageSize">Mobile Small (320 x 426)</p>
-                <p class="ImageSize">Mobile Small (414 x 552)</p>
-            </div>
-        </div>   
-    <h2 class="ImageTitle">Aspect de las imagenes 1:1</h2>
-    <p class="ImageDescription">Los siguientes activos muestran las medidas para ser utilizado HightImpact Centered Profile Follow Four Items</p>
-        <div class="ImageData">
-        <img class="imagen" src={mobileSmall158x158} alt="Input" />
-            <div class="OptionCaption">
-                <p class="ImageSize">Mobile Small (220 x 220)</p>
-                <p class="ImageSize">Mobile Small (158 x 158)</p>
-                <p class="ImageSize">Mobile Small (414 x 414)</p>
-            </div>
-        </div>
-</div>
+    </div>
+    <div class="ImageAspects">
+    <h2 class="ImageTitle">Aspect Image 9:16</h2>
+    <p class="ImageDescription">
+      The following assets show the measures to be used for the sources of the
+      different widgets.
+    </p>
+    <div class="ImageData">
+      <img class="imagen" src={medium389x692} alt="Buttons" />
+      <div class="OptionCaption">
+        <table class="Widgets">
+          <tr>
+            <th >Measure</th>
+            <th >Widgets</th>
+          </tr>
+          <tr>
+            <td>389x692</td>
+            <td>
+            <ul>
+                <li>HighImpact Full</li>
+              </ul>
+              </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    </div>
+    <div class="ImageAspects">
+    <h2 class="ImageTitle">Aspect Image 4:3</h2>
+    <p class="ImageDescription">
+      The following assets show the measures to be used for the sources of the
+      different widgets.
+    </p>
+    <div class="ImageData">
+      <img class="imagen" src={thumbnail268x202} alt="Typography" />
+      <div class="OptionCaption">
+        <table class="Widgets">
+          <tr>
+            <th >Measure</th>
+            <th >Widgets</th>
+          </tr>
+          <tr>
+            <td>268x202</td>
+            <td>
+            <ul>
+                <li>Content Carousel</li>
+                <li>Inline Gallery | Carousel</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>414x311</td>
+            <td>
+            <ul>
+                <li>Content Carousel</li>
+                <li>Five Items</li>
+                <li>Inline Gallery | Slider
+              Item</li>
+                <li>Stack</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>716x537</td>
+            <td>
+            <ul>
+                <li>Five Items</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>818x614</td>
+            <td>
+            <ul>
+                <li>Five Items</li>
+                <li>HighImpact Full Image</li>
+                <li>Inline Gallery |
+              Slider Item </li>
+                <li>Stack</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    </div>
+    <div class="ImageAspects">
+    <h2 class="ImageTitle">Aspect Image 3:4</h2>
+    <p class="ImageDescription">
+      The following assets show the measures to be used for the sources of the
+      different widgets.
+    </p>
+    <div class="ImageData">
+      <img class="imagen" src={mobileSmall225x301} alt="Grid" />
+      <div class="OptionCaption">
+        <table class="Widgets">
+          <tr>
+            <th >Measure</th>
+            <th >Widgets</th>
+          </tr>
+          <tr>
+            <td>225x301</td>
+            <td rowspan="3">
+            <ul>
+                <li>Card Person | Carousel</li>
+                <li>Promo Cards | Chapter</li>
+                <li>Promo
+              Cards | Show</li>
+                <li>Promo Cards | Section</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>320x426</td>
+          </tr>
+          <tr>
+            <td>414x552</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    </div>
+    <div class="ImageAspects">
+    <h2 class="ImageTitle">Aspect Image 1:1</h2>
+    <p class="ImageDescription">
+      The following assets show the measures to be used for the sources of the
+      different widgets.
+    </p>
+    <div class="ImageData">
+      <img class="imagen" src={mobileSmall158x158} alt="Input" />
+      <div class="OptionCaption">
+        <table class="Widgets">
+          <tr>
+            <th >Measure</th>
+            <th >Widgets</th>
+          </tr>
+          <tr>
+            <td rowspan="2">220x200</td>
+            <td>
+            <ul>
+                <li>HighImpact Centered</li>
+              </ul>
+              </td>
+          </tr>
+          <tr>
+            <td>
+            <ul>
+                <li>Profile Follow</li>
+              </ul></td>
+          </tr>
+          <tr>
+            <td rowspan="2">414x414</td>
+            <td>
+            <ul>
+                <li>Four Items</li>
+              </ul>
+              </td>
+          </tr>
+          <tr>
+            <td>
+            <ul>
+                <li>HighImpact Centered</li>
+              </ul>
+              </td>
+          </tr>
+          <tr>
+            <td>158x158</td>
+            <td>
+            <ul>
+                <li>Thumbnail</li>
+              </ul>
+              </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    </div>
+  </div>
 </>
-

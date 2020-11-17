@@ -33,7 +33,7 @@ const InputDescription = styled(Box)(
     `,
 );
 
-const InputColors = styled(Title)(
+const InputTitle = styled(Title)(
     ({ theme }) => css`
         font-size: ${theme.fontSizes.fxl2};
         color: ${theme.colors.Dark};
@@ -42,20 +42,9 @@ const InputColors = styled(Title)(
     `,
 );
 
-const BoxInputsType = styled(Box)(
-    ({ theme }) => css`
-        display: block;
-        align-items: center;
-        min-height: 60px;
-        padding-top: ${theme.space.xs};
-        padding-bottom: ${theme.space.xs};
-    `,
-);
-
 const CaptionInput = styled(Text)(
     ({ theme }) => css`
-        margin-top: ${theme.space.lg};
-        margin-bottom: ${theme.space.lg};
+        padding-top: ${theme.space.lg};
         padding-left: ${theme.space.lg};
         padding-right: ${theme.space.lg};
         font-size: ${theme.fontSizes.fsm};
@@ -68,13 +57,8 @@ const InputContainer = styled(Box)(
     ({ theme }) => css`
         display: block;
         width: 100%;
-        padding-right: ${theme.space.lg};
-        @media (min-width: ${theme.breakpoints.xl}) {
-            display: flex;
-            max-width: 1024px;
-            padding-right: ${theme.space.lg};
-            padding-left: ${theme.space.lg};
-        }
+        margin-top: ${theme.space.xxl};
+        margin-bottom: ${theme.space.xxl};
     `,
 );
 
@@ -96,23 +80,43 @@ const InputStyleIcon = styled(Box)(
     `,
 );
 
+const BoxInputsType = styled(Box)(
+    ({ theme }) => css`
+        display: block;
+        align-items: center;
+        margin-bottom: ${theme.space.xxl};
+    `,
+);
+
+const InputIcon = styled(Box)(
+    ({ theme }) => css`
+        margin-top: ${theme.space.xl3};
+    `,
+);
+
 const SubTitleInput = styled(Text)(
     ({ theme }) => css`
         font-size: ${theme.fontSizes.fsm};
         color: ${theme.colors.Dark};
-        padding-bottom: ${theme.space.base};
+        padding-bottom: ${theme.space.md};
     `,
 );
 
-const InputsForm = styled(Form)`
-    min-height: 40px;
-`;
+const InputsForm = styled(Form)(
+    ({ theme }) => css`
+        min-width: 300px;
+        min-height: 10px;
+        width: 100%;
+        align-items: center;
+        display: flex;
+    `,
+);
 
 export const INPUTS = () => {
     return (
         <BoxInput variant="Transparent">
             <InputDescription variant="Transparent">
-                <InputColors variant="h2">Input</InputColors>
+                <InputTitle variant="h2">Input</InputTitle>
                 <CaptionInput>
                     Individual forms automatically receive some global styles.
                 </CaptionInput>
@@ -122,6 +126,13 @@ export const INPUTS = () => {
                 <InputStyle variant="Transparent">
                     <BoxInputsType variant="Transparent">
                         <SubTitleInput variant="h2">My Text</SubTitleInput>
+                        <InputsForm>
+                            <Inputs variant="Empty" />
+                        </InputsForm>
+                    </BoxInputsType>
+
+                    <BoxInputsType variant="Transparent">
+                        <SubTitleInput variant="h2">Interaction</SubTitleInput>
                         <InputsForm>
                             <Inputs variant="Interaction" />
                         </InputsForm>
@@ -148,41 +159,57 @@ export const INPUTS = () => {
                         </InputsForm>
                     </BoxInputsType>
                 </InputStyle>
-
-                <InputStyleIcon variant="Transparent">
-                    <BoxInputsType variant="Tranparent">
-                        <SubTitleInput variant="h2"> Interaction </SubTitleInput>
-                        <InputsForm>
-                            <Inputs variant="Interaction" />
-                            <Icons name="ArrowRight" variant="Outline" />
-                        </InputsForm>
-                    </BoxInputsType>
-
-                    <BoxInputsType variant="Transparent">
-                        <SubTitleInput variant="h2"> Done </SubTitleInput>
-                        <InputsForm>
-                            <Inputs variant="Done" />
-                            <Icons name="ArrowRight" variant="Outline" />
-                        </InputsForm>
-                    </BoxInputsType>
-
-                    <BoxInputsType variant="Transparent">
-                        <SubTitleInput variant="h2"> Warning </SubTitleInput>
-                        <InputsForm>
-                            <Inputs variant="Warning" />
-                            <Icons name="ArrowRight" variant="Outline" />
-                        </InputsForm>
-                    </BoxInputsType>
-
-                    <BoxInputsType variant="Transparent">
-                        <SubTitleInput variant="h2"> Error</SubTitleInput>
-                        <InputsForm>
-                            <Inputs variant="Error" />
-                            <Icons name="ArrowRight" variant="Outline" />
-                        </InputsForm>
-                    </BoxInputsType>
-                </InputStyleIcon>
             </InputContainer>
+
+            <InputIcon variant="Transparent">
+                <InputDescription variant="Transparent">
+                    <InputTitle variant="h2">Input Icon</InputTitle>
+                </InputDescription>
+
+                <InputContainer variant="Transparent">
+                    <InputStyleIcon variant="Transparent">
+                        <BoxInputsType variant="Tranparent">
+                            <SubTitleInput variant="h2"> My Text </SubTitleInput>
+                            <InputsForm>
+                                <Inputs variant="Empty" />
+                                <Icons name="Search" variant="Outline" />
+                            </InputsForm>
+                        </BoxInputsType>
+
+                        <BoxInputsType variant="Tranparent">
+                            <SubTitleInput variant="h2"> Interaction </SubTitleInput>
+                            <InputsForm>
+                                <Inputs variant="Interaction" />
+                                <Icons name="Search" variant="Outline" />
+                            </InputsForm>
+                        </BoxInputsType>
+
+                        <BoxInputsType variant="Transparent">
+                            <SubTitleInput variant="h2"> Done </SubTitleInput>
+                            <InputsForm>
+                                <Inputs variant="Done" />
+                                <Icons name="Search" variant="Active" />
+                            </InputsForm>
+                        </BoxInputsType>
+
+                        <BoxInputsType variant="Transparent">
+                            <SubTitleInput variant="h2"> Warning </SubTitleInput>
+                            <InputsForm>
+                                <Inputs variant="Warning" />
+                                <Icons name="Search" variant="Outline" />
+                            </InputsForm>
+                        </BoxInputsType>
+
+                        <BoxInputsType variant="Transparent">
+                            <SubTitleInput variant="h2"> Error</SubTitleInput>
+                            <InputsForm>
+                                <Inputs variant="Error" />
+                                <Icons name="Search" variant="Outline" />
+                            </InputsForm>
+                        </BoxInputsType>
+                    </InputStyleIcon>
+                </InputContainer>
+            </InputIcon>
         </BoxInput>
     );
 };

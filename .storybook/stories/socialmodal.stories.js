@@ -11,7 +11,7 @@ export default {
 export const SOCIALMODAL = () => {
     return (
         <Fragment>
-            <SocialModal active />
+            <SocialModal active closebtn={false} />
         </Fragment>
     );
 };

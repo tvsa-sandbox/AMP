@@ -2,15 +2,16 @@ import React from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { EpisodeItem } from "items";
-import { EpisodeCarousel } from "widgets";
+import { ContentCarousel } from "widgets";
 import Title from "accessories/Title";
-import { EpisodeCarouselThumb } from "../../lib/widgets/EpisodeCarousel/styles";
+import { ContentCarouselThumbStyles } from "../../lib/widgets/ContentCarousel/styles";
 export default {
     decorators: [withKnobs],
     title: "Desing System/Widgets/EpisodeCarousel",
 };
 import Mock from "./imageMock.json";
 import { Carousel } from "../../lib/accessories";
+import { ContentCarouselTitleStyles } from "../../lib/widgets/ContentCarousel/styles";
 
 export const EPISODECAROUSEL = args => {
     const { aspect = "aspect16x9", bsp = "medium" } = args;
@@ -29,34 +30,34 @@ export const EPISODECAROUSEL = args => {
     return (
         <div>
             <Title variant="h2">ContentCarousel </Title>
-            <EpisodeCarousel>
+            <ContentCarousel title="Una familia de diez">
                 <Carousel arrow="Back">
-                    <EpisodeCarouselThumb>
+                    <ContentCarouselThumbStyles>
                         <EpisodeItem ratio="aspect16x9" image={SRC} />
-                    </EpisodeCarouselThumb>
-                    <EpisodeCarouselThumb>
+                    </ContentCarouselThumbStyles>
+                    <ContentCarouselThumbStyles>
                         <EpisodeItem ratio="aspect16x9" image={SRC} />
-                    </EpisodeCarouselThumb>
-                    <EpisodeCarouselThumb>
+                    </ContentCarouselThumbStyles>
+                    <ContentCarouselThumbStyles>
                         <EpisodeItem ratio="aspect16x9" image={SRC} />
-                    </EpisodeCarouselThumb>
-                    <EpisodeCarouselThumb>
+                    </ContentCarouselThumbStyles>
+                    <ContentCarouselThumbStyles>
                         <EpisodeItem ratio="aspect16x9" image={SRC} />
-                    </EpisodeCarouselThumb>
-                    <EpisodeCarouselThumb>
+                    </ContentCarouselThumbStyles>
+                    <ContentCarouselThumbStyles>
                         <EpisodeItem ratio="aspect16x9" image={SRC} />
-                    </EpisodeCarouselThumb>
-                    <EpisodeCarouselThumb>
+                    </ContentCarouselThumbStyles>
+                    <ContentCarouselThumbStyles>
                         <EpisodeItem ratio="aspect16x9" image={SRC} />
-                    </EpisodeCarouselThumb>
-                    <EpisodeCarouselThumb>
+                    </ContentCarouselThumbStyles>
+                    <ContentCarouselThumbStyles>
                         <EpisodeItem ratio="aspect16x9" image={SRC} />
-                    </EpisodeCarouselThumb>
-                    <EpisodeCarouselThumb>
+                    </ContentCarouselThumbStyles>
+                    <ContentCarouselThumbStyles>
                         <EpisodeItem ratio="aspect16x9" image={SRC} />
-                    </EpisodeCarouselThumb>
+                    </ContentCarouselThumbStyles>
                 </Carousel>
-            </EpisodeCarousel>
+            </ContentCarousel>
         </div>
     );
 };
