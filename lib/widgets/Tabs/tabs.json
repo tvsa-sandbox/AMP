@@ -1,10 +1,10 @@
 [
     {
-        "path": "/tu-tv",
+        "tabid": "episodios",
         "name": "EPISODIOS"
     },
     {
-        "path": "/telenovelas",
+        "tabid": "telenovelas",
         "name": "CLIPS"
     }
 ]

@@ -5,6 +5,7 @@ import Utils from "@televisadigital/nxtv-utilities";
 import Show from "../../lib/contentTypes/Show";
 
 import Mock from "./imageMock-le.json";
+import Poster from "../../assets/Poster.jpg";
 
 export default {
     decorators: [withKnobs],
@@ -20,8 +21,8 @@ export const SHOW = args => {
             size: bsp,
         },
         {
-            aspect: "aspect3x4",
-            query: "(min-width: 0px) and (max-width: 414px)",
+            aspect: "aspect4x3",
+            query: "(min-width: 0px)",
             size: "mobile-large",
         },
         {
@@ -34,8 +35,18 @@ export const SHOW = args => {
     const SRC = {
         poster: [
             {
-                desktop: IMG[0],
-                mobile: IMG[0],
+                desktop: {
+                    height: "544px",
+                    query: "(min-width: 0px)",
+                    width: "1280px",
+                    srcSet: Poster,
+                },
+                mobile: {
+                    height: "544px",
+                    query: "(min-width: 0px)",
+                    width: "1280px",
+                    srcSet: Poster,
+                },
             },
         ],
         items: [

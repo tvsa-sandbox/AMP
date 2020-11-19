@@ -4,7 +4,7 @@ import Utils from "@televisadigital/nxtv-utilities";
 
 import HomeVideo from "../../lib/contentTypes/HomeVideo";
 
-import Mock from "./imageMock.json";
+import Mock from "./imageMock-le.json";
 
 export default {
     decorators: [withKnobs],
