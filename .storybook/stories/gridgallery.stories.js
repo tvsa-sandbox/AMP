@@ -4,6 +4,7 @@ import Utils from "@televisadigital/nxtv-utilities";
 
 import GridGallery from "../../lib/widgets/GridGallery";
 import Mock from "./imageMock.json";
+import slides from "../../lib/mocks/Mockup.json";
 
 export default {
     decorators: [withKnobs],
@@ -44,8 +45,12 @@ export const GRIDGALLERY = args => {
             },
         ],
     };
-    const props = () => ({
-        title: text("Titulo", "Titulo de test"),
-    });
-    return <GridGallery ratio={aspect} src={SRC.gridgallery[0]} gal={SRC.gridgal[0]} {...props} />;
+    return (
+        <GridGallery
+            ratio={aspect}
+            src={SRC.gridgallery[0]}
+            galimg={SRC.gridgal[0]}
+            gal={slides.slides}
+        />
+    );
 };

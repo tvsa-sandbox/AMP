@@ -1,5 +1,5 @@
 import React from "react";
-import { withKnobs } from "@storybook/addon-knobs";
+import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title } from "accessories";
 
@@ -13,7 +13,7 @@ export default {
 };
 
 export const MATCHITEM = args => {
-    const { aspect = "aspect4x3", bsp = "medium" } = args;
+    const { aspect = "aspect1x1", bsp = "medium" } = args;
     const SOURCES = [
         {
             aspect: aspect,
@@ -21,7 +21,7 @@ export const MATCHITEM = args => {
             size: bsp,
         },
         {
-            aspect: "aspect3x4",
+            aspect: "aspect1x1",
             query: "(min-width: 0px) and (max-width: 414px)",
             size: "mobile-large",
         },
@@ -32,13 +32,13 @@ export const MATCHITEM = args => {
         desktop: {},
         mobile: IMG[0],
     };
-    const props = () => ({
-        title: text("Titulo", "Titulo de test"),
-    });
+    const team1 = text("Team A", "América");
+    const team2 = text("Team B", "Guadalajara");
+    const time = text("Time", "19:00");
     return (
         <div>
             <Title variant="h2">MatchItem</Title>
-            <MatchItem ratio={aspect} src={SRC} {...props} />
+            <MatchItem src={SRC} team1={team1} team2={team2} time={time} />
         </div>
     );
 };

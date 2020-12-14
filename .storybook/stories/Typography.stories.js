@@ -154,7 +154,10 @@ export const TITLE = () => {
             <FontContainer variant="Transparent">
                 <TypographyDescription variant="Transparent">
                     <TypographyTitle variant="h2">Typography</TypographyTitle>
-                    <CaptionTypography>Fonts.</CaptionTypography>
+                    <CaptionTypography>
+                    The fonts will make reading easier and will help with the general structure
+                    of the interface.
+                    </CaptionTypography>
                 </TypographyDescription>
                 <TypographyContainer variant="Transparent">
                     <BoxStyle variant="Transparent">
@@ -191,10 +194,13 @@ export const TITLE = () => {
 
             <ScaleContainer variant="Transparent">
                 <TypographyDescription variant="Transparent">
-                    <TypographyTitle variant="h2">Typography Scale</TypographyTitle>
+                    <TypographyTitle variant="h2">Headings</TypographyTitle>
                     <CaptionTypography>
-                        The fonts will make reading easier and will help with the general structure
-                        of the interface.
+                    Headings are the most prominent typographic elements. 
+                    They are the first items that users read. They must 
+                    attract attention and give information in the most efficient way. 
+                    The h1 heading is the most prominent heading style and the h6 heading 
+                    is the least.
                     </CaptionTypography>
                 </TypographyDescription>
                 <TypographyContainer variant="Transparent">
@@ -236,16 +242,6 @@ export const TITLE = () => {
                             <TextCopy>
                                 Esta es una muestra de los 120 caracteres reales que acepta una
                                 descripción en nuestra interfaz de usuario.
-                            </TextCopy>
-                        </BoxText>
-                    </BoxStyle>
-
-                    <BoxStyle variant="Transparent">
-                        <SubTitleText variant="h2">Anchor</SubTitleText>
-                        <BoxText variant="Transparent">
-                            <TextCopy>
-                                Este es un ejemplo de como se va a visualizar un{" "}
-                                <Anchor variant="Active">link</Anchor> dentro de texto.
                             </TextCopy>
                         </BoxText>
                     </BoxStyle>

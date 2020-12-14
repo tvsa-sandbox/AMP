@@ -5,6 +5,7 @@ import Utils from "@televisadigital/nxtv-utilities";
 import Show from "../../lib/contentTypes/Show";
 
 import Mock from "./imageMock-le.json";
+import tags from "../../lib/widgets/PosterCard/tags.json";
 import Poster from "../../assets/Poster.jpg";
 
 export default {
@@ -56,5 +57,5 @@ export const SHOW = args => {
             },
         ],
     };
-    return <Show imgposter={SRC.poster[0]} imgitems={SRC.items[0]} />;
+    return <Show imgposter={SRC.poster[0]} imgitems={SRC.items[0]} tags={tags} />;
 };

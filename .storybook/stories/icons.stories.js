@@ -200,6 +200,7 @@ export const ICONS = () => {
             <BoxIcons variant="Transparent">
                 <IconsDescription variant="Transparent">
                     <TitleIcons variant="h1">Icon Duration</TitleIcons>
+                    <CaptionIcons>Duration time icon.</CaptionIcons>
                 </IconsDescription>
                 <IconsDurationStyle variant="Transparent">
                     <IconDuration>{name}</IconDuration>

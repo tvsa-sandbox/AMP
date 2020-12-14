@@ -20,11 +20,11 @@
                 "custom": "ignore"
             }
         ],
-        "module-resolver/use-alias": 0,
-        "settings": {
-            "import/resolver": {
-                "babel-module": {}
-            }
-        }
+        "module-resolver/use-alias": 0
     }
+        // "settings": {
+        //     "import/resolver": {
+        //         "babel-module": {}
+        //     }
+        // }
 }

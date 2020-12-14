@@ -1,5 +1,5 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { withKnobs, text, number } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title, Box, Image } from "accessories";
 
@@ -26,9 +26,9 @@ export const ENDCARD = args => {
         desktop: {},
         mobile: IMG[0],
     };
-    const props = () => ({
-        title: text("Titulo", "Titulo de test"),
-    });
+    const progress = number("Progreso", 90);
+    const title = text("Titulo", "Una Familia de Diez");
+    const btntext = text("Botón", "Detener");
     return (
         <div>
             <Title variant="h2">End Card</Title>
@@ -41,7 +41,13 @@ export const ENDCARD = args => {
                 color="Danger"
             >
                 <Image src={SRC} />
-                <EndCard ratio={aspect} src={SRC} {...props} />
+                <EndCard
+                    ratio={aspect}
+                    src={SRC}
+                    progress={progress}
+                    title={title}
+                    btntext={btntext}
+                />
             </Box>
         </div>
     );

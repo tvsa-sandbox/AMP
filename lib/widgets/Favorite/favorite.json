@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "icon": "Home"
+    },
+    {
+        "id": 1,
+        "icon": "ForoTV"
+    },
+    {
+        "id": 2,
+        "icon": "CanalCinco"
+    },
+    {
+        "id": 3,
+        "icon": "Nueve"
+    },
+    {
+        "id": 4,
+        "icon": "TUDN"
+    },
+    {
+        "id": 5,
+        "icon": "News"
+    },
+    {
+        "id": 6,
+        "icon": "Bandamax"
+    },
+    {
+        "id": 7,
+        "icon": "Telehit"
+    },
+    {
+        "id": 8,
+        "icon": "Unicable"
+    }
+]

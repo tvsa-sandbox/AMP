@@ -39,7 +39,7 @@ export const CAROSUELSPORTS = args => {
     return (
         <div>
             <Title variant="h2">CarouselSports</Title>
-            <CarouselSports ratio={aspect} src={SRC} {...props} />;
+            <CarouselSports ratio={aspect} src={SRC} {...props} />
         </div>
     );
 };

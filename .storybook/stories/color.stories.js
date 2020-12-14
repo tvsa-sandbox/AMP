@@ -154,10 +154,20 @@ export const COLOR = () => {
                         <ColorDrop variant="Black" />
                     </ColorDescriptionContainer>
                 </ColorStyle>
+            </ColorContainer>
 
+            <ColorDescription variant="Transparent">
+                <TitleColors variant="h2">Form Color</TitleColors>
+                    <CaptionColors>
+                    The main colors of all our ui are used in the forms, 
+                    they never change therefore they are the same in all 
+                    the ui and their function is to communicate to the user 
+                    the status of the component, be it something positive, 
+                    negative or an alert message.
+                    </CaptionColors>
+            </ColorDescription>
+            <ColorContainer>
                 <ColorStyleForm variant="Transparent">
-                    <ColorsType variant="h2">Form Colors </ColorsType>
-
                     <ColorDescriptionContainer variant="Transparent">
                         <SubTitleColors variant="h3">Done</SubTitleColors>
                         <ColorDrop variant="Done" />

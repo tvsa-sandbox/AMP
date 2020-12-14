@@ -112,13 +112,28 @@ const InputsForm = styled(Form)(
     `,
 );
 
+const Inputwhite = styled(Inputs)(
+    ({ theme }) => css`
+        background:white;
+        width: 300px;
+        height: 35px;
+        border-radius: 6px;
+    `,
+);
+
+
+
 export const INPUTS = () => {
     return (
         <BoxInput variant="Transparent">
             <InputDescription variant="Transparent">
                 <InputTitle variant="h2">Input</InputTitle>
                 <CaptionInput>
-                    Individual forms automatically receive some global styles.
+                A basic accessory for obtaining user input is a text field. 
+                Inputs should be clearly labeled so it’s obvious to the user what 
+                they should enter into the field.
+                Inputs can have a placeholder, a default value, a required state, 
+                an error state, and a disabled state. 
                 </CaptionInput>
             </InputDescription>
 
@@ -127,7 +142,7 @@ export const INPUTS = () => {
                     <BoxInputsType variant="Transparent">
                         <SubTitleInput variant="h2">My Text</SubTitleInput>
                         <InputsForm>
-                            <Inputs variant="Empty" />
+                            <Inputwhite/>
                         </InputsForm>
                     </BoxInputsType>
 
@@ -164,6 +179,11 @@ export const INPUTS = () => {
             <InputIcon variant="Transparent">
                 <InputDescription variant="Transparent">
                     <InputTitle variant="h2">Input Icon</InputTitle>
+                    <CaptionInput>
+                    An icon can be provided to specify to the user what action to take.
+                    They can be used to help with formatting or show contextual indicators 
+                    of the content we're asking for.
+                    </CaptionInput>
                 </InputDescription>
 
                 <InputContainer variant="Transparent">
@@ -171,7 +191,7 @@ export const INPUTS = () => {
                         <BoxInputsType variant="Tranparent">
                             <SubTitleInput variant="h2"> My Text </SubTitleInput>
                             <InputsForm>
-                                <Inputs variant="Empty" />
+                                <Inputwhite/>
                                 <Icons name="Search" variant="Outline" />
                             </InputsForm>
                         </BoxInputsType>

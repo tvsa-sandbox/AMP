@@ -16,7 +16,7 @@ export const QUOTE = () => {
     return (
         <div>
             <Title variant="h2">Enhancement Quote</Title>
-            <Quote {...props} />;
+            <Quote {...props} />
         </div>
     );
 };

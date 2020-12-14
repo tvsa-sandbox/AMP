@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import extractCSS from "../../lib/helpers/cssextractor";
 
-import { Button, Title, Box, Icons, Text, Info } from "accessories";
+import { Button, Title, Box, Text, Info } from "accessories";
 
 export default {
     decorators: [withKnobs],
@@ -107,9 +107,8 @@ export const BUTTON = () => {
                     <TitleButton variant="h1">Button</TitleButton>
                     <CaptionButton>
                         The buttons of an interface are vital elements, since in most cases they
-                        have many of the navigation capabilities. These buttons are accompanied by
-                        an icon that represents their action, in addition to the text. The inactive
-                        version of the button can be activated on the knobs.
+                        have many of the navigation capabilities. The inactive version of the button
+                        can be activated on the knobs.
                     </CaptionButton>
                 </ButtonDescription>
                 <ButtonsContainer variant="Transparent">
@@ -143,23 +142,28 @@ export const BUTTON = () => {
                 </ButtonsContainer>
                 <ButtonDescription variant="Transparent">
                     <TitleButton variant="h1">Button Icon</TitleButton>
+                    <CaptionButton>
+                        These buttons only have the icon that represents their action.
+                    </CaptionButton>
                 </ButtonDescription>
                 <ButtonsContainer variant="Tranparent">
                     <ButtonTypeBox variant="Transparent">
-                        <Button disabled={boolean("Desactivado", false)} aria-label="boton">
-                            <Icons name="Search" color="#ffff" />
-                        </Button>
+                        <Button
+                            icon="Search"
+                            disabled={boolean("Desactivado", false)}
+                            aria-label="boton"
+                        />
                         <ButtonInfo>Active State</ButtonInfo>
                     </ButtonTypeBox>
 
                     <ButtonTypeBox variant="Transparent">
                         <Button
+                            icon="Search"
+                            iconcolor="Interaction"
                             variant="Outline"
                             disabled={boolean("Desactivado", false)}
                             aria-label="boton"
-                        >
-                            <Icons name="Search" variant="Outline" />
-                        </Button>
+                        />
                         <ButtonInfo>Button Outline</ButtonInfo>
                     </ButtonTypeBox>
                     <ButtonTypeBox variant="Transparent">
@@ -167,35 +171,46 @@ export const BUTTON = () => {
                             variant="Transparent"
                             disabled={boolean("Desactivado", false)}
                             aria-label="boton"
-                        >
-                            <Icons name="Search" variant="Transparent" />
-                        </Button>
+                            icon="Search"
+                            iconcolor="Interaction"
+                        />
                         <ButtonInfo>Button Transparent</ButtonInfo>
                     </ButtonTypeBox>
                 </ButtonsContainer>
                 <ButtonDescription variant="Transparent">
                     <TitleButton variant="h1">Button Double</TitleButton>
+                    <CaptionButton>
+                        These buttons are accompanied by an icon that represents their action, in
+                        addition to the text.
+                    </CaptionButton>
                 </ButtonDescription>
                 <ButtonsContainer variant="Tranparent">
                     <ButtonTypeBox variant="Transparent">
-                        <Button disabled={boolean("Desactivado", false)}>
-                            <Icons name="Search" color="#ffff" />
+                        <Button icon="Search" disabled={boolean("Desactivado", false)}>
                             {name}
                         </Button>
                         <ButtonInfo>Active State</ButtonInfo>
                     </ButtonTypeBox>
 
                     <ButtonTypeBox variant="Transparent">
-                        <Button variant="Outline" disabled={boolean("Desactivado", false)}>
-                            <Icons name="Search" variant="Outline" />
+                        <Button
+                            iconcolor="Interaction"
+                            icon="Search"
+                            variant="Outline"
+                            disabled={boolean("Desactivado", false)}
+                        >
                             {name}
                         </Button>
                         <ButtonInfo>Button Outline</ButtonInfo>
                     </ButtonTypeBox>
 
                     <ButtonTypeBox variant="Transparent">
-                        <Button variant="Transparent" disabled={boolean("Desactivado", false)}>
-                            <Icons name="Search" variant="Transparent" />
+                        <Button
+                            variant="Transparent"
+                            disabled={boolean("Desactivado", false)}
+                            icon="Search"
+                            iconcolor="Interaction"
+                        >
                             {name}
                         </Button>
                         <ButtonInfo>Button Transparent</ButtonInfo>

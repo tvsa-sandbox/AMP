@@ -12,7 +12,7 @@ export default {
 };
 
 export const ITEMLEAGUE = args => {
-    const { aspect = "aspect16x1", bsp = "medium" } = args;
+    const { aspect = "aspect1X1", bsp = "thumbnail" } = args;
     const SOURCES = [
         {
             aspect,
@@ -27,4 +27,3 @@ export const ITEMLEAGUE = args => {
     };
     return <ItemLeague ratio={aspect} image={SRC} />;
 };
-

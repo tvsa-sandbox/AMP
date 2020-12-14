@@ -11,7 +11,7 @@ export default {
 import Mock from "./imageMock.json";
 
 export const LEAGUECAROUSEL = args => {
-    const { aspect = "aspect16x9", bsp = "medium" } = args;
+    const { aspect = "aspect1x1", bsp = "medium" } = args;
     const SOURCES = [
         {
             aspect,
@@ -28,7 +28,7 @@ export const LEAGUECAROUSEL = args => {
         <div>
             <Title variant="h2">LeagueCarousel</Title>
             <Box my="lg" variant="Transparent">
-                <LeagueCarousel />
+                <LeagueCarousel ratio={aspect} src={SRC} />
             </Box>
         </div>
     );

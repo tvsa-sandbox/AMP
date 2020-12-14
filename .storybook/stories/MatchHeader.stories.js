@@ -3,16 +3,17 @@ import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title } from "accessories";
 
-import Score from "../../lib/widgets/Score";
+import MatchHeader from "../../lib/widgets/MatchHeader";
 
 import Mock from "./imageMock.json";
+import matchHeader from "../../lib/widgets/MatchHeader/matchHeader.json";
 
 export default {
     decorators: [withKnobs],
-    title: "Desing System/Widgets/Score",
+    title: "Desing System/Widgets/MatchHeader",
 };
 
-export const SCORE = args => {
+export const MATCHHEADER = args => {
     const { aspect = "aspect1x1", bsp = "medium" } = args;
     const SOURCES = [
         {
@@ -31,8 +32,8 @@ export const SCORE = args => {
     });
     return (
         <div>
-            <Title variant="h2">Score</Title>
-            <Score ratio={aspect} src={SRC} {...props} />
+            <Title variant="h2">MatchHeader</Title>
+            <MatchHeader ratio={aspect} src={SRC} matchs={matchHeader} {...props} />
         </div>
     );
 };

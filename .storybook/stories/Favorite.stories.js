@@ -3,6 +3,7 @@ import { withKnobs, text } from "@storybook/addon-knobs";
 import { Title } from "accessories";
 
 import Favorite from "../../lib/widgets/Favorite";
+import favorite from "../../lib/widgets/Favorite/favorite.json"
 
 export default {
     decorators: [withKnobs],
@@ -13,7 +14,7 @@ export const FAVORITE = () => {
     return (
         <div>
             <Title variant="h2">Favorite</Title>
-            <Favorite />
+            <Favorite names={favorite} />
         </div>
     );
 };

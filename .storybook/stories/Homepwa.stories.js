@@ -1,5 +1,5 @@
 import React from "react";
-import { withKnobs, text, boolean } from "@storybook/addon-knobs";
+import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import HomePWA from "../../lib/contentTypes/PWA/HomePWA";
@@ -10,6 +10,7 @@ export default {
 };
 
 import Mock from "./imageMock.json";
+import slides from "../../lib/mocks/Mockup.json";
 
 export const HOMEPWA = args => {
     const { aspect = "aspect16x9", bsp = "medium" } = args;
@@ -51,12 +52,14 @@ export const HOMEPWA = args => {
             },
         ],
     };
+    console.log("imgs", slides.slides);
     return (
         <HomePWA
             grid={SRC.gridgallery[0]}
             imgs={SRC.imgenhancement[0]}
             carrousel={SRC.carousel[0]}
             rel={SRC.imgenhancement[0]}
+            items={slides.slides}
         />
     );
 };

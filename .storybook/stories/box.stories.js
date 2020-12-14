@@ -34,6 +34,18 @@ const BoxDescription = styled(Box)(
     `,
 );
 
+const BoxSection = styled(Box)(
+    ({ theme }) => css`
+        width: 100%;
+        display: block;
+        position: relative;
+        margin-bottom: ${theme.space.xxl};
+        @media (min-width: ${theme.breakpoints.xl}) {
+            max-width: 1024px;
+        }
+    `,
+);
+
 const BoxTitle = styled(Title)(
     ({ theme }) => css`
         font-size: ${theme.fontSizes.fxl2};
@@ -69,11 +81,9 @@ const BoxType = styled(Box)(
     ({ theme }) => css`
         display: block;
         width: 100%;
-        max-width: 200px;
+        max-width: 150px;
         height: 100px;
         background-color: ${theme.colors.Dark};
-        margin-left: 0px;
-        margin-bottom: ${theme.space.xxl};
         @media (min-width: ${theme.breakpoints.xl}) {
             max-width: 600px;
         }
@@ -84,9 +94,12 @@ const BoxTransparent = styled(Box)(
     ({ theme }) => css`
         display: block;
         width: 100%;
-        max-width: 200px;
+        max-width: 150px;
         height: 100px;
         border: 1px #cccccc solid;
+        @media (min-width: ${theme.breakpoints.xl}) {
+            max-width: 600px;
+        }
     `,
 );
 
@@ -105,6 +118,33 @@ const SubTitleTransparent = styled(Text)(
         padding: ${theme.space.lg};
     `,
 );
+
+const SubTitleText = styled(Text)(
+    ({ theme }) => css`
+        font-size: ${theme.fontSizes.fbase};
+        font-weight: ${theme.fontWeights.bold};
+        color: ${theme.colors.graycataloge};
+        padding-bottom: ${theme.space.base};
+    `,
+);
+
+const BoxText = styled(Text)(
+    ({ theme }) => css`
+        line-height: ${theme.lineHeights.llg};
+        font-size: ${theme.fontSizes.fsm};
+    `,
+);
+const BoxStyle = styled(Box)(
+    ({ theme }) => css`
+        display: block;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: ${theme.space.xxl};
+        margin-top: ${theme.space.xxl};
+    `,
+);
+
 export const BOX = () => {
     return (
         <BoxContainer variant="Transparent">
@@ -115,26 +155,47 @@ export const BOX = () => {
                 </BoxCaption>
             </BoxDescription>
             <BoxContent variant="Transparent">
-                <BoxType variant="Solid">
-                    <SubTitleBox>Solid</SubTitleBox>
-                </BoxType>
-
-                <BoxType variant="Space">
-                    <SubTitleBox>Space</SubTitleBox>
-                </BoxType>
-
-                <BoxTransparent variant="Transparent">
-                    <SubTitleTransparent>Transparent</SubTitleTransparent>
-                </BoxTransparent>
-
-                <Box variant="Flex">
-                    <BoxType variant="Space">
-                        <SubTitleBox>Flex</SubTitleBox>
+                <BoxStyle variant="Transparent">
+                    <BoxSection variant="Transparent">
+                        <SubTitleText variant="h2">Box Solid</SubTitleText>
+                        <BoxText>Box with background color.</BoxText>
+                    </BoxSection>
+                    <BoxType variant="Solid">
+                        <SubTitleBox>Solid</SubTitleBox>
                     </BoxType>
+                </BoxStyle>
+                <BoxStyle variant="Transparent">
+                    <BoxDescription variant="Transparent">
+                        <SubTitleText variant="h2">Box Space</SubTitleText>
+                        <BoxText>Box with 15px margin.</BoxText>
+                    </BoxDescription>
                     <BoxType variant="Space">
-                        <SubTitleBox>Flex</SubTitleBox>
+                        <SubTitleBox>Space</SubTitleBox>
                     </BoxType>
-                </Box>
+                </BoxStyle>
+                <BoxStyle variant="Transparent">
+                    <BoxDescription variant="Transparent">
+                        <SubTitleText variant="h2">Box Transparent</SubTitleText>
+                        <BoxText>Box without background color.</BoxText>
+                    </BoxDescription>
+                    <BoxTransparent variant="Transparent">
+                        <SubTitleTransparent>Transparent</SubTitleTransparent>
+                    </BoxTransparent>
+                </BoxStyle>
+                <BoxStyle variant="Transparent">
+                    <BoxDescription variant="Transparent">
+                        <SubTitleText variant="h2">Box Flex</SubTitleText>
+                        <BoxText>Wrapper to combine the elements in one single row.</BoxText>
+                    </BoxDescription>
+                    <Box variant="Flex">
+                        <BoxType variant="Solid">
+                            <SubTitleBox>Flex</SubTitleBox>
+                        </BoxType>
+                        <BoxTransparent variant="Tranparent">
+                            <SubTitleTransparent>Flex</SubTitleTransparent>
+                        </BoxTransparent>
+                    </Box>
+                </BoxStyle>
             </BoxContent>
         </BoxContainer>
     );

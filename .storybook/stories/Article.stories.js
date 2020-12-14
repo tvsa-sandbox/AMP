@@ -1,5 +1,5 @@
 import React from "react";
-import { withKnobs, text, boolean } from "@storybook/addon-knobs";
+import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import Article from "../../lib/contentTypes/Article";
@@ -10,6 +10,7 @@ export default {
 };
 
 import Mock from "./imageMock-le.json";
+import slides from "../../lib/mocks/Mockup.json";
 
 export const ARTICLE = args => {
     const { aspect = "aspect16x9", bsp = "medium" } = args;
@@ -69,11 +70,12 @@ export const ARTICLE = args => {
     };
     return (
         <Article
-            grid={SRC.gridgallery[0]}
             imgs={SRC.imgenhancement[0]}
             carrousel={SRC.carousel[0]}
             rel={SRC.imgenhancement[0]}
-            gal={SRC.gridgal[0]}
+            grid={SRC.gridgallery[0]}
+            gal={slides.slides}
+            galimg={SRC.gridgal[0]}
         />
     );
 };

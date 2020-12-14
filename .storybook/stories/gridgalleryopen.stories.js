@@ -4,6 +4,7 @@ import Utils from "@televisadigital/nxtv-utilities";
 
 import GridGalleryOpen from "../../lib/widgets/GridGalleryOpen";
 import Mock from "./imageMock-le.json";
+import slides from "../../lib/mocks/Mockup.json";
 
 export default {
     decorators: [withKnobs],
@@ -24,5 +25,12 @@ export const GRIDGALLERYOPEN = args => {
         desktop: {},
         mobile: IMG[0],
     };
-    return <GridGalleryOpen slides={SRC} active handlePics={() => alert("funcionvacia")} />;
+    return (
+        <GridGalleryOpen
+            slides={slides.slides}
+            slidesimg={SRC}
+            active
+            handlePics={() => alert("funcionvacia")}
+        />
+    );
 };
