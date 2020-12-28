@@ -11,7 +11,7 @@ export default {
 };
 
 export const TICKERITEM = args => {
-    const { aspect = "aspect4x3", bsp = "medium" } = args;
+    const { aspect = "aspect1x1", bsp = "medium" } = args;
     const SOURCES = [
         {
             aspect: aspect,
@@ -19,9 +19,9 @@ export const TICKERITEM = args => {
             size: bsp,
         },
         {
-            aspect: "aspect3x4",
+            aspect: "aspect1x1",
             query: "(min-width: 0px) and (max-width: 414px)",
-            size: "mobile-large",
+            size: "medium",
         },
     ];
 

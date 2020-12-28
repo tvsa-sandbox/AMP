@@ -23,21 +23,24 @@ import EjemploDesktop from "../assets/EjemploDesktop.png";
     margin-top:24px;
   }
 
+.Mobile {
+  margin-top:24px;
+}
+
+.Desktop {
+  margin-top:48px;
+}
+
   @media (min-width: 1024px){
     .Modal {
       display:flex;
-      width:100%
-
+      width:100%;
+    }
+    .Desktop {
+      margin-top:24px;
     }
   }
 
-.imagen{
-  margin-bottom:24px;
-}
-
-.Desktop, .Mobile {
-  margin-top:24px;
-}
 
 
 `}</style>
@@ -51,14 +54,14 @@ component is used to get the user's attention and insist that they make an inter
 <>
 <div class="Modal">
   <div class="Mobile">
-    <img class="imagen" src={EjemploMobil} alt="Colors" />
-    <h4 class="OptionTitle">Mobile</h4>
-    This is an example of how it is displayed in Mobile.
+     <h4 class="OptionTitle">Mobile</h4>
+    <p>This is an example of how it is displayed in Mobile.</p>
+    <img src={EjemploMobil} alt="Colors" />   
   </div>
   <div class="Desktop">
-    <img class="imagen" src={EjemploDesktop} alt="Buttons" />
     <h4 class="OptionTitle">Desktop</h4>
-    This is an example of how it is displayed on desktop.
+    <p>This is an example of how it is displayed on desktop.</p>
+    <img src={EjemploDesktop} alt="Buttons" />   
   </div>  
 </div>
 </>

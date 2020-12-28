@@ -49,7 +49,7 @@ const CaptionInput = styled(Text)(
         padding-right: ${theme.space.lg};
         font-size: ${theme.fontSizes.fsm};
         color: ${theme.colors.Dark};
-        line-height: ${theme.lineHeights.lsm};
+        line-height: ${theme.lineHeights.llg};
     `,
 );
 
@@ -114,14 +114,12 @@ const InputsForm = styled(Form)(
 
 const Inputwhite = styled(Inputs)(
     ({ theme }) => css`
-        background:white;
+        background: white;
         width: 300px;
         height: 35px;
         border-radius: 6px;
     `,
 );
-
-
 
 export const INPUTS = () => {
     return (
@@ -129,11 +127,10 @@ export const INPUTS = () => {
             <InputDescription variant="Transparent">
                 <InputTitle variant="h2">Input</InputTitle>
                 <CaptionInput>
-                A basic accessory for obtaining user input is a text field. 
-                Inputs should be clearly labeled so it’s obvious to the user what 
-                they should enter into the field.
-                Inputs can have a placeholder, a default value, a required state, 
-                an error state, and a disabled state. 
+                    A basic accessory for obtaining user input is a text field. Inputs should be
+                    clearly labeled so it’s obvious to the user what they should enter into the
+                    field. Inputs can have a placeholder, a default value, a required state, an
+                    error state, and a disabled state.
                 </CaptionInput>
             </InputDescription>
 
@@ -142,7 +139,7 @@ export const INPUTS = () => {
                     <BoxInputsType variant="Transparent">
                         <SubTitleInput variant="h2">My Text</SubTitleInput>
                         <InputsForm>
-                            <Inputwhite/>
+                            <Inputwhite />
                         </InputsForm>
                     </BoxInputsType>
 
@@ -180,9 +177,9 @@ export const INPUTS = () => {
                 <InputDescription variant="Transparent">
                     <InputTitle variant="h2">Input Icon</InputTitle>
                     <CaptionInput>
-                    An icon can be provided to specify to the user what action to take.
-                    They can be used to help with formatting or show contextual indicators 
-                    of the content we're asking for.
+                        An icon can be provided to specify to the user what action to take. They can
+                        be used to help with formatting or show contextual indicators of the content
+                        we're asking for.
                     </CaptionInput>
                 </InputDescription>
 
@@ -191,7 +188,7 @@ export const INPUTS = () => {
                         <BoxInputsType variant="Tranparent">
                             <SubTitleInput variant="h2"> My Text </SubTitleInput>
                             <InputsForm>
-                                <Inputwhite/>
+                                <Inputwhite />
                                 <Icons name="Search" variant="Outline" />
                             </InputsForm>
                         </BoxInputsType>

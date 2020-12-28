@@ -50,6 +50,7 @@ const CaptionTypography = styled(Text)(
         padding-right: ${theme.space.lg};
         font-size: ${theme.fontSizes.fsm};
         color: ${theme.colors.Dark};
+        line-height: ${theme.lineHeights.llg};
         @media (min-width: ${theme.breakpoints.xl}) {
             max-width: 1024px;
         }
@@ -155,8 +156,8 @@ export const TITLE = () => {
                 <TypographyDescription variant="Transparent">
                     <TypographyTitle variant="h2">Typography</TypographyTitle>
                     <CaptionTypography>
-                    The fonts will make reading easier and will help with the general structure
-                    of the interface.
+                        The fonts will make reading easier and will help with the general structure
+                        of the interface.
                     </CaptionTypography>
                 </TypographyDescription>
                 <TypographyContainer variant="Transparent">
@@ -164,8 +165,8 @@ export const TITLE = () => {
                         <SubTitleText variant="h2">Main Typeface</SubTitleText>
                         <BoxText variant="Transparent">
                             <TextCopy>
-                                El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña
-                                toca el saxofón detrás del palenque de paja.
+                                Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts.
                             </TextCopy>
                         </BoxText>
                     </BoxStyle>
@@ -174,8 +175,8 @@ export const TITLE = () => {
                         <SubTitleText variant="h2">Secondary Typeface</SubTitleText>
                         <BoxText variant="Transparent">
                             <TextCopy>
-                                El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña
-                                toca el saxofón detrás del palenque de paja.
+                                Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts.
                             </TextCopy>
                         </BoxText>
                     </BoxStyle>
@@ -184,8 +185,8 @@ export const TITLE = () => {
                         <SubTitleText variant="h2">"System Typeface"</SubTitleText>
                         <BoxText variant="Transparent">
                             <TextCopy>
-                                El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña
-                                toca el saxofón detrás del palenque de paja.
+                                Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts.
                             </TextCopy>
                         </BoxText>
                     </BoxStyle>
@@ -196,11 +197,10 @@ export const TITLE = () => {
                 <TypographyDescription variant="Transparent">
                     <TypographyTitle variant="h2">Headings</TypographyTitle>
                     <CaptionTypography>
-                    Headings are the most prominent typographic elements. 
-                    They are the first items that users read. They must 
-                    attract attention and give information in the most efficient way. 
-                    The h1 heading is the most prominent heading style and the h6 heading 
-                    is the least.
+                        Headings are the most prominent typographic elements. They are the first
+                        items that users read. They must attract attention and give information in
+                        the most efficient way. The h1 heading is the most prominent heading style
+                        and the h6 heading is the least.
                     </CaptionTypography>
                 </TypographyDescription>
                 <TypographyContainer variant="Transparent">
@@ -240,8 +240,8 @@ export const TITLE = () => {
                         <SubTitleText variant="h2">Text Paragraph</SubTitleText>
                         <BoxText variant="Transparent">
                             <TextCopy>
-                                Esta es una muestra de los 120 caracteres reales que acepta una
-                                descripción en nuestra interfaz de usuario.
+                                This is a sample of the actual 120 characters accepted in a
+                                description in the user interface.
                             </TextCopy>
                         </BoxText>
                     </BoxStyle>
@@ -249,14 +249,14 @@ export const TITLE = () => {
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Info</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Info>Autor:José de Jesus</Info>
+                            <Info>Author: José de Jesus</Info>
                         </BoxText>
                     </BoxStyle>
 
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Airtime</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Time variant="Airtime">Julio 28 ,2020</Time>
+                            <Time variant="Airtime">July 28 ,2020</Time>
                         </BoxText>
                     </BoxStyle>
 

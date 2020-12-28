@@ -1,9 +1,10 @@
 import React from "react";
-import { withKnobs, select } from "@storybook/addon-knobs";
+// import { withKnobs, select } from "@storybook/addon-knobs";
 import { withHTML } from "@whitespace/storybook-addon-html/react";
 import { withAmpDecorator } from "storybook-amp";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { ThemeProvider } from "styled-components";
+// import { StoryContext, StoryGetter, StoryWrapper } from "@storybook/addons";
 import * as whiteLabel from "../lib/themes/whiteLabel";
 import * as lasEstrellas from "../lib/themes/lasEstrelllas";
 import * as TUDN from "../lib/themes/tudn";
@@ -54,7 +55,7 @@ const tvsa = tvsacom;
 
 const modes = ["light", "dark"];
 
-const getTheme = (mode, btheme) =>
+const getThemeMode = (mode, btheme) =>
     merge({}, btheme, {
         colors: get(btheme.colors.modes, mode, btheme.colors),
     });
@@ -62,44 +63,56 @@ const getTheme = (mode, btheme) =>
 // const [mode, setMode] = useState(modes[0]);
 
 const THEMES = {
-    "Las Estrellas": getTheme(modes[1], le),
-    "Las Estrellas Light": getTheme(modes[0], le),
-    TUDN: getTheme(modes[0], tudn),
-    "Televisa News": getTheme(modes[0], tn),
-    "Bandamax Light": getTheme(modes[0], bmx),
-    "Bandamax Dark": getTheme(modes[1], bmx),
-    "Canal 5": getTheme(modes[0], cinco),
-    "El Nueve": getTheme(modes[1], c9),
-    Telehit: getTheme(modes[0], hit),
-    Unicable: getTheme(modes[0], uni),
-    TelevisaCom: getTheme(modes[0], tvsa),
-    "Video Digital": getTheme(modes[0], vd),
-    "Video Digital": getTheme(modes[1], vd),
-    WhiteLabel: getTheme(modes[0], wl),
-    "WhiteLabel Dark": getTheme(modes[1], wl),
-    "Los Pleyers": getTheme(modes[0], lp),
-    "Plumas Atomicas": getTheme(modes[0], pa),
-    Erizos: getTheme(modes[0], ez),
-    Bitme: getTheme(modes[0], bit),
-    "Codigo Espagueti": getTheme(modes[0], ce),
-    "Frente Creativo": getTheme(modes[0], fc),
-    "Oink Oink": getTheme(modes[0], ok),
-    Slang: getTheme(modes[0], sl),
-    "Viviendo Casa": getTheme(modes[0], vc),
-    "Distrito Comedia": getTheme(modes[0], dc),
+    "Las Estrellas": getThemeMode(modes[1], le),
+    "Las Estrellas Light": getThemeMode(modes[0], le),
+    TUDN: getThemeMode(modes[0], tudn),
+    "Televisa News": getThemeMode(modes[0], tn),
+    "Bandamax Light": getThemeMode(modes[0], bmx),
+    "Bandamax Dark": getThemeMode(modes[1], bmx),
+    "Canal 5": getThemeMode(modes[0], cinco),
+    "El Nueve": getThemeMode(modes[1], c9),
+    Telehit: getThemeMode(modes[0], hit),
+    Unicable: getThemeMode(modes[0], uni),
+    TelevisaCom: getThemeMode(modes[0], tvsa),
+    "Video Digital": getThemeMode(modes[1], vd),
+    WhiteLabel: getThemeMode(modes[0], wl),
+    "WhiteLabel Dark": getThemeMode(modes[1], wl),
+    "Los Pleyers": getThemeMode(modes[0], lp),
+    "Plumas Atomicas": getThemeMode(modes[0], pa),
+    Erizos: getThemeMode(modes[0], ez),
+    Bitme: getThemeMode(modes[0], bit),
+    "Codigo Espagueti": getThemeMode(modes[0], ce),
+    "Frente Creativo": getThemeMode(modes[0], fc),
+    "Oink Oink": getThemeMode(modes[0], ok),
+    Slang: getThemeMode(modes[0], sl),
+    "Viviendo Casa": getThemeMode(modes[0], vc),
+    "Distrito Comedia": getThemeMode(modes[0], dc),
 };
-// console.log("tema", THEMES["las Estrellas"].ui.name);
+
+export const globalTypes = {
+    theme: {
+        name: "Theme",
+        description: "Global theme for components",
+        defaultValue: "Video Digital",
+        toolbar: {
+            icon: "document",
+            // array of plain string values or MenuItem shape (see below)
+            items: Object.keys(THEMES),
+        },
+    },
+};
 
 const withThemeProvider = (Story, context) => {
+    const theme = THEMES[context.globals.theme];
+    // console.log("tema", context.globals.theme);
     return (
-        <ThemeProvider theme={select("Theme", THEMES, THEMES["Video Digital"])}>
+        <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Story {...context} />
         </ThemeProvider>
     );
 };
 
-const customStyles = `${css}`; // `${css}`some styles
 
 export const parameters = {
     amp: {
