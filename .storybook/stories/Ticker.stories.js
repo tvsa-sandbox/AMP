@@ -7,7 +7,7 @@ import Mock from "./imageMock.json";
 
 export default {
     decorators: [withKnobs],
-    title: "Desing System/widgets/Ticker",
+    title: "Desing System/TUDN/Ticker",
 };
 
 export const TICKER = args => {

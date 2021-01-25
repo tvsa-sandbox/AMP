@@ -121,7 +121,7 @@ const Inputwhite = styled(Inputs)(
     `,
 );
 
-export const INPUTS = () => {
+export const INPUTS = args => {
     return (
         <BoxInput variant="Transparent">
             <InputDescription variant="Transparent">
@@ -229,4 +229,34 @@ export const INPUTS = () => {
             </InputIcon>
         </BoxInput>
     );
+};
+
+INPUTS.args = {
+    title:
+        "Angelique Boyer con toda la mejor actitud en su regreso triunfal a Tik Tok por segunda vez",
+    icon: "Buscar",
+    size: "50",
+};
+
+INPUTS.argTypes = {
+    size: {
+        control: {
+            type: "range",
+            min: 0,
+            max: 100,
+        },
+        description: "Input size",
+        defaultValue: 0,
+        table: {
+            defaultValue: { summary: 0 },
+        },
+    },
+    title: {
+        control: "text",
+        description: "Input title",
+    },
+    icon: {
+        control: "text",
+        description: "Icon name",
+    },
 };

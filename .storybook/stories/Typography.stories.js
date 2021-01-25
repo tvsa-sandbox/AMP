@@ -147,9 +147,13 @@ const TextContainer = styled(Box)(
     `,
 );
 
-export const TITLE = () => {
+export const TITLE = args => {
     const name = text("Titulo", "Title");
     const namelabel = text("Etiqueta", "Label");
+    const namecounter = text("Counter", "10/15");
+    const nameinfo = text("Info", "Author: José de Jesus");
+    const nameair = text("Airtime", "July 28 ,2020");
+    const nameduration = text("Duration", "24:00");
     return (
         <BoxTypography variant="Transparent">
             <FontContainer variant="Transparent">
@@ -205,27 +209,7 @@ export const TITLE = () => {
                 </TypographyDescription>
                 <TypographyContainer variant="Transparent">
                     <BoxTextTitle variant="Transparent">
-                        <TitleType variant="h1">H1 - {name}</TitleType>
-                    </BoxTextTitle>
-
-                    <BoxTextTitle variant="Transparent">
-                        <TitleType variant="h2">H2 - {name} </TitleType>
-                    </BoxTextTitle>
-
-                    <BoxTextTitle variant="Transparent">
-                        <TitleType variant="h3">H3 - {name} </TitleType>
-                    </BoxTextTitle>
-
-                    <BoxTextTitle variant="Transparent">
-                        <TitleType variant="h4">H4 - {name} </TitleType>
-                    </BoxTextTitle>
-
-                    <BoxTextTitle variant="Transparent">
-                        <TitleType variant="h5">H5 - {name} </TitleType>
-                    </BoxTextTitle>
-
-                    <BoxTextTitle variant="Transparent">
-                        <TitleType variant="h6">H6 - {name} </TitleType>
+                        <Title variant="h1" {...args} />
                     </BoxTextTitle>
                 </TypographyContainer>
             </ScaleContainer>
@@ -249,31 +233,28 @@ export const TITLE = () => {
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Info</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Info>Author: José de Jesus</Info>
+                            <Info>{nameinfo}</Info>
                         </BoxText>
                     </BoxStyle>
 
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Airtime</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Time variant="Airtime">July 28 ,2020</Time>
+                            <Time variant="Airtime">{nameair}</Time>
                         </BoxText>
                     </BoxStyle>
 
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Duration</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Time variant="Duration">24:00</Time>
-                        </BoxText>
-                        <BoxText variant="Transparent">
-                            <Time variant="DurationLight">24:00</Time>
+                            <Time variant="Duration">{nameduration}</Time>
                         </BoxText>
                     </BoxStyle>
 
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Counter</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Time>10/10</Time>
+                            <Time>{namecounter}</Time>
                         </BoxText>
                     </BoxStyle>
 
@@ -287,4 +268,19 @@ export const TITLE = () => {
             </TextContainer>
         </BoxTypography>
     );
+};
+
+TITLE.args = {
+    children: "Title H",
+    variant: "h1",
+};
+TITLE.argTypes = {
+    children: { control: "text" },
+    variant: {
+        description: "Variantes",
+        control: {
+            type: "select",
+            options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+        },
+    },
 };

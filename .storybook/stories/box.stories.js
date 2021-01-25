@@ -145,7 +145,7 @@ const BoxStyle = styled(Box)(
     `,
 );
 
-export const BOX = () => {
+export const BOX = args => {
     return (
         <BoxContainer variant="Transparent">
             <BoxDescription variant="Transparent">
@@ -199,4 +199,18 @@ export const BOX = () => {
             </BoxContent>
         </BoxContainer>
     );
+};
+BOX.args = {
+    children: "Solid",
+    variant: "Solid",
+};
+BOX.argTypes = {
+    children: { control: "text", description: "Texto" },
+    variant: {
+        description: "Variantes",
+        control: {
+            type: "select",
+            options: ["Solid", "Space", "Transparent", "Flex"],
+        },
+    },
 };

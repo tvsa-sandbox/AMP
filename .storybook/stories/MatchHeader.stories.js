@@ -10,7 +10,7 @@ import matchHeader from "../../lib/widgets/MatchHeader/matchHeader.json";
 
 export default {
     decorators: [withKnobs],
-    title: "Desing System/Widgets/MatchHeader",
+    title: "Desing System/TUDN/MatchHeader",
 };
 
 export const MATCHHEADER = args => {

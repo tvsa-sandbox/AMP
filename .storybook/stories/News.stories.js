@@ -9,7 +9,7 @@ import Mock from "./imageMock.json";
 
 export default {
     decorators: [withKnobs],
-    title: "Desing System/Widgets/News",
+    title: "Desing System/TUDN/News",
 };
 
 export const NEWS = args => {

@@ -3,14 +3,13 @@ import { withKnobs } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title } from "accessories";
 
-import MatchItem from "../../lib/widgets/CarouselSports";
-
 import Mock from "./imageMock.json";
 import CarouselSports from "../../lib/widgets/CarouselSports";
+import carouselSports from "../../lib/widgets/CarouselSports/carouselSports.json";
 
 export default {
     decorators: [withKnobs],
-    title: "Desing System/widgets/CarouselSports",
+    title: "Desing System/TUDN/CarouselSports",
 };
 
 export const CAROSUELSPORTS = args => {
@@ -39,7 +38,7 @@ export const CAROSUELSPORTS = args => {
     return (
         <div>
             <Title variant="h2">CarouselSports</Title>
-            <CarouselSports ratio={aspect} src={SRC} {...props} />
+            <CarouselSports ratio={aspect} src={SRC} sports={carouselSports} {...props} />
         </div>
     );
 };

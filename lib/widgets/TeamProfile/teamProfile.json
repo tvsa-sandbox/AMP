@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "team": "Manchester United",
+        "date": "1878",
+        "stadium": "Old Trafford",
+        "persons":"76,000",
+        "coach":"Ole Gunnar",
+        "table":"2"
+    },
+    {
+        "id": 1,
+        "team": "Newcastle United",
+        "date": "1892",
+        "stadium": "St. James' Park",
+        "persons":"52,305",
+        "coach":"Steve Bruce",
+        "table":"15"
+    }
+]

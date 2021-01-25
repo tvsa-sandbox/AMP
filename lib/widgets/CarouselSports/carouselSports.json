@@ -1,0 +1,52 @@
+[
+    {
+        "id": 0,
+        "icon": "Cloud",
+        "name": "Box"
+    },
+    {
+        "id": 1,
+        "icon": "Cloud",
+        "name": "NFL"
+    },
+    {
+        "id": 2,
+        "icon": "Cloud",
+        "name": "Futbol"
+    },
+    {
+        "id": 3,
+        "icon": "Cloud",
+        "name": "Tenis"
+    },
+    {
+        "id": 4,
+        "icon": "Cloud",
+        "name": "Olimpicos"
+    },
+    {
+        "id": 5,
+        "icon": "Cloud",
+        "name": "Copa Mundial"
+    },
+    {
+        "id": 6,
+        "icon": "Cloud",
+        "name": "Baseball"
+    },
+    {
+        "id": 7,
+        "icon": "Cloud",
+        "name": "NASCAR"
+    },
+    {
+        "id": 8,
+        "icon": "Cloud",
+        "name": "Formula 1"
+    },
+    {
+        "id": 9,
+        "icon": "Cloud",
+        "name": "Golf"
+    }
+]
