@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { withKnobs } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import Mock from "./imageMock-le.json";
 import { Title } from "accessories";
 import { Promotional } from "../../lib/widgets";
 export default {
-    decorators: [withKnobs],
     title: "Desing System/widgets/Promotional",
 };
 export const PROMOTIONAL = args => {

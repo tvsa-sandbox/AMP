@@ -1,12 +1,10 @@
 import React, { Fragment } from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { ItemCarousel } from "items";
 import { ContentCarousel } from "widgets";
 import Title from "accessories/Title";
 import { ContentCarouselThumbStyles } from "../../lib/widgets/ContentCarousel/styles";
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Widgets/ContentCarousel",
 };
 import Mock from "./imageMock.json";

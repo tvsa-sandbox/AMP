@@ -1,12 +1,10 @@
 import React, { Fragment } from "react";
-import { withKnobs } from "@storybook/addon-knobs";
 import { Footer, FooterTLJ, FooterNews } from "widgets";
 import { Title, Box } from "accessories";
 
 import FooterAMP from "../../lib/widgets/Footer/FooterAMP";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Widgets/Footer",
 };
 

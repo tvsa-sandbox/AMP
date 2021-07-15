@@ -1,15 +1,13 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title } from "accessories";
-
 import News from "../../lib/widgets/News";
-
 import Mock from "./imageMock.json";
+import news from "../../lib/widgets/News/news.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/TUDN/News",
+    component: News,
 };
 
 export const NEWS = args => {
@@ -26,13 +24,11 @@ export const NEWS = args => {
         desktop: {},
         mobile: IMG[0],
     };
-    const props = () => ({
-        title: text("Titulo", "Titulo de test"),
-    });
+
     return (
         <div>
             <Title variant="h2">News</Title>
-            <News ratio={aspect} src={SRC} />
+            <News ratio={aspect} src={SRC} datas={news} />
         </div>
     );
 };

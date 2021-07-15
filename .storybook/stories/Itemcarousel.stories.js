@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import ItemCarousel from "../../lib/items/ItemCarousel";
@@ -8,7 +7,6 @@ import SkeletonCarousel from "../../lib/items/ItemCarousel/SkeletonCarousel";
 import Mock from "./imageMock.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Items/Carousel",
 };
 

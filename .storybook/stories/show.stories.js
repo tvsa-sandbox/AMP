@@ -1,5 +1,4 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import Show from "../../lib/contentTypes/Show";
@@ -9,7 +8,6 @@ import tags from "../../lib/widgets/PosterCard/tags.json";
 import Poster from "../../assets/Poster.jpg";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Template/Show",
 };
 

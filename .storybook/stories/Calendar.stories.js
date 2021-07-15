@@ -5,7 +5,7 @@ import Calendar from "../../lib/widgets/Calendar";
 import Mock from "./imageMock.json";
 
 export default {
-    title: "Desing System/widgets/Calendar",
+    title: "Desing System/TUDN/Calendar",
 };
 
 export const CALENDAR = args => {
@@ -25,7 +25,7 @@ export const CALENDAR = args => {
     return (
         <div>
             <Title variant="h2">Ticker</Title>
-            <Calendar ratio={aspect} src={SRC} />
+            <Calendar ratio={aspect} src={SRC} bgcolor="#76b04d" />
         </div>
     );
 };

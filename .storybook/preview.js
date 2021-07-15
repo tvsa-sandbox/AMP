@@ -4,7 +4,6 @@ import { withHTML } from "@whitespace/storybook-addon-html/react";
 import { withAmpDecorator } from "storybook-amp";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { ThemeProvider } from "styled-components";
-// import { StoryContext, StoryGetter, StoryWrapper } from "@storybook/addons";
 import * as whiteLabel from "../lib/themes/whiteLabel";
 import * as lasEstrellas from "../lib/themes/lasEstrelllas";
 import * as TUDN from "../lib/themes/tudn";
@@ -26,6 +25,7 @@ import * as oink from "../lib/themes/oinkoink";
 import * as viviendoencasa from "../lib/themes/viviendoencasa";
 import * as distrito from "../lib/themes/distritocomedia";
 import * as slang from "../lib/themes/slang";
+import * as feeds from "../lib/themes/feeds";
 import GlobalStyle from "../lib/accessories/GlobalStyles";
 import merge from "lodash.merge";
 import get from "lodash.get";
@@ -52,13 +52,16 @@ const vc = viviendoencasa;
 const dc = distrito;
 const sl = slang;
 const tvsa = tvsacom;
+const fd = feeds;
 
 const modes = ["light", "dark"];
 
-const getThemeMode = (mode, btheme) =>
-    merge({}, btheme, {
-        colors: get(btheme.colors.modes, mode, btheme.colors),
-    });
+const getThemeMode = (mode, btheme) => {
+    const MODE = btheme.colors.modes[mode];
+    const COLORS = btheme.colors;
+    const MIXED = { ...btheme, colors: { ...COLORS, ...MODE } };
+    return MIXED;
+};
 
 // const [mode, setMode] = useState(modes[0]);
 
@@ -87,13 +90,14 @@ const THEMES = {
     Slang: getThemeMode(modes[0], sl),
     "Viviendo Casa": getThemeMode(modes[0], vc),
     "Distrito Comedia": getThemeMode(modes[0], dc),
+    "Sistema Feeds": getThemeMode(modes[0], fd),
 };
 
 export const globalTypes = {
     theme: {
         name: "Theme",
         description: "Global theme for components",
-        defaultValue: "Video Digital",
+        defaultValue: "Las Estrellas Light",
         toolbar: {
             icon: "document",
             // array of plain string values or MenuItem shape (see below)
@@ -119,9 +123,16 @@ export const parameters = {
         isEnabled: true,
         styles: customStyles, // Custom styles from some string
     },
+    viewMode: "docs",
     viewport: {
         viewports: INITIAL_VIEWPORTS,
         defaultViewport: "galaxys5",
+    },
+    html: {
+        highlighter: {
+            showLineNumbers: true, // default: false
+            wrapLines: false, // default: true
+        },
     },
 };
 

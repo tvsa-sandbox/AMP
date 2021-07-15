@@ -1,11 +1,9 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import HomePWA from "../../lib/contentTypes/PWA/HomePWA";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/TemplatePWA/HomePWA",
 };
 

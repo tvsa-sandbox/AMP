@@ -1,0 +1,18 @@
+[
+      {  
+          "id":0,
+                "title": "Asistencias"
+        },
+        {  
+          "id":1,
+                "title": " Tarjetas Amarillas"
+        },
+        {  
+          "id":2,
+                "title": "Tarjetas Rojas"
+        },
+        {  
+          "id":3,
+                "title": "Remates"
+        }
+    ]

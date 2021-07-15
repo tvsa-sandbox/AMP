@@ -1,5 +1,4 @@
 import React from "react";
-import { withKnobs, text, number } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title, Box, Image } from "accessories";
 
@@ -8,7 +7,6 @@ import EndCard from "../../lib/widgets/EndCard";
 import Mock from "./imageMock.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/widgets/EndCard",
 };
 
@@ -26,9 +24,20 @@ export const ENDCARD = args => {
         desktop: {},
         mobile: IMG[0],
     };
-    const progress = number("Progreso", 90);
-    const title = text("Titulo", "Una Familia de Diez");
-    const btntext = text("Botón", "Detener");
+    const rel = [
+        {
+            id: 0,
+            src: SRC,
+        },
+        {
+            id: 1,
+            src: SRC,
+        },
+        {
+            id: 2,
+            src: SRC,
+        },
+    ];
     return (
         <div>
             <Title variant="h2">End Card</Title>
@@ -41,14 +50,29 @@ export const ENDCARD = args => {
                 color="Danger"
             >
                 <Image src={SRC} />
-                <EndCard
-                    ratio={aspect}
-                    src={SRC}
-                    progress={progress}
-                    title={title}
-                    btntext={btntext}
-                />
+                <EndCard ratio={aspect} src={SRC} related={rel} {...args} />
             </Box>
         </div>
     );
+};
+ENDCARD.args = {
+    btntext: "Detener",
+    title: "“¡Me enamoré, mamá!”: Clara le cuenta la verdad a Nieves",
+    progress: 90,
+};
+ENDCARD.argTypes = {
+    btntext: { control: "text" },
+    title: { control: "text" },
+    progress: {
+        control: {
+            type: "range",
+            min: 0,
+            max: 100,
+        },
+        description: "Input size",
+        defaultValue: 0,
+        table: {
+            defaultValue: { summary: 0 },
+        },
+    },
 };

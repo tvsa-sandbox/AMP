@@ -1,15 +1,14 @@
 import React from "react";
-import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import ArticlePWA from "../../lib/contentTypes/PWA/ArticlePWA";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/TemplatePWA/ArticlePWA",
 };
 
 import Mock from "./imageMock-le.json";
+import slides from "../../lib/mocks/Mockup.json";
 
 export const ARTICLEPWA = args => {
     const { aspect = "aspect16x9", bsp = "medium" } = args;
@@ -73,7 +72,8 @@ export const ARTICLEPWA = args => {
             imgs={SRC.imgenhancement[0]}
             carrousel={SRC.carousel[0]}
             rel={SRC.imgenhancement[0]}
-            gal={SRC.gridgal[0]}
+            gal={slides.slides}
+            galimg={SRC.gridgal[0]}
         />
     );
 };

@@ -1,12 +1,10 @@
 import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import { Title, Text, Box } from "accessories";
 import { Color } from "../../lib/accessories";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Atoms/Color",
 };
 
@@ -158,13 +156,12 @@ export const COLOR = () => {
 
             <ColorDescription variant="Transparent">
                 <TitleColors variant="h2">Form Color</TitleColors>
-                    <CaptionColors>
-                    The main colors of all our ui are used in the forms, 
-                    they never change therefore they are the same in all 
-                    the ui and their function is to communicate to the user 
-                    the status of the component, be it something positive, 
-                    negative or an alert message.
-                    </CaptionColors>
+                <CaptionColors>
+                    The main colors of all our ui are used in the forms, they never change therefore
+                    they are the same in all the ui and their function is to communicate to the user
+                    the status of the component, be it something positive, negative or an alert
+                    message.
+                </CaptionColors>
             </ColorDescription>
             <ColorContainer>
                 <ColorStyleForm variant="Transparent">

@@ -1,0 +1,75 @@
+[
+    {  
+        "id":0,
+        "suplentes":{
+            "Local": [
+            {
+            "number":19,
+            "name":"Ozan Kabak"
+            },
+            {
+                "number":27,
+            "name":"Divock  Orig"
+            },
+            {
+                "number":7,
+            "name":"James Milne"
+            },
+            {
+                "number":13,
+            "name":"Adrián"
+            },
+            {
+                "number":15,
+            "name":"Alex Oxlade-Chamberlai"
+            },
+            {
+                "number":23,
+            "name":"Xherdan Shaqirik"
+            },
+            {
+                "number":47,
+            "name":"Nathaniel Phillips"
+            },
+            {
+                "number":76,
+            "name":"Neco Wiliams"
+            },
+            {
+                "number":21,
+            "name":"Konstantinos Tsimikas"
+            }
+        ],
+        "Away":[
+            {
+                "number":21,
+                "name":"Ferran Torres"
+            },
+            {
+                "number":25,
+                "name":"Fernandinho                "
+            },
+            {
+                "number":14,
+                "name":"Aymeric"
+            },
+            {
+                "number":82,
+                "name":"Adrián Bernabé"
+            },
+            {
+                "number":69,
+                "name":"Tommy Doyle"
+            },
+            {
+                "number":22,
+                "name":"Gabriel Jesus"
+            },
+            {
+                "number":50,
+                "name":"Benjamin Mendy"
+            }   
+        ]
+    }
+}
+]

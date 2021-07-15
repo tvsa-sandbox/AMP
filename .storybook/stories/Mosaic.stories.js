@@ -1,13 +1,10 @@
 import React from "react";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title } from "accessories";
-
 import Mosaic from "../../lib/widgets/Mosaic";
-
 import Mock from "./imageMock.json";
-
 export default {
-    title: "Desing System/Widgets/Mosaic",
+    title: "Desing System/TUDN/Mosaic",
 };
 
 export const MOSAIC = args => {

@@ -1,5 +1,4 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import HomeVideo from "../../lib/contentTypes/HomeVideo";
@@ -7,7 +6,6 @@ import HomeVideo from "../../lib/contentTypes/HomeVideo";
 import Mock from "./imageMock-le.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Template/Homevideo",
 };
 

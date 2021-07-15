@@ -1,12 +1,11 @@
 import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
-import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 
-import { Form, Title, Text, Label, Box, Inputs, Icons } from "accessories";
+import { Form, Title, Text, Box, Inputs } from "accessories";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Atoms/Inputs",
+    component: "Inputs",
 };
 
 const BoxInput = styled(Box)(
@@ -139,7 +138,7 @@ export const INPUTS = args => {
                     <BoxInputsType variant="Transparent">
                         <SubTitleInput variant="h2">My Text</SubTitleInput>
                         <InputsForm>
-                            <Inputwhite />
+                            <Inputs {...args} />
                         </InputsForm>
                     </BoxInputsType>
 
@@ -188,40 +187,35 @@ export const INPUTS = args => {
                         <BoxInputsType variant="Tranparent">
                             <SubTitleInput variant="h2"> My Text </SubTitleInput>
                             <InputsForm>
-                                <Inputwhite />
-                                <Icons name="Search" variant="Outline" />
+                                <Inputwhite icon="Search" />
                             </InputsForm>
                         </BoxInputsType>
 
                         <BoxInputsType variant="Tranparent">
                             <SubTitleInput variant="h2"> Interaction </SubTitleInput>
                             <InputsForm>
-                                <Inputs variant="Interaction" />
-                                <Icons name="Search" variant="Outline" />
+                                <Inputs variant="Interaction" icon="Search" />
                             </InputsForm>
                         </BoxInputsType>
 
                         <BoxInputsType variant="Transparent">
                             <SubTitleInput variant="h2"> Done </SubTitleInput>
                             <InputsForm>
-                                <Inputs variant="Done" />
-                                <Icons name="Search" variant="Active" />
+                                <Inputs variant="Done" icon="Search" />
                             </InputsForm>
                         </BoxInputsType>
 
                         <BoxInputsType variant="Transparent">
                             <SubTitleInput variant="h2"> Warning </SubTitleInput>
                             <InputsForm>
-                                <Inputs variant="Warning" />
-                                <Icons name="Search" variant="Outline" />
+                                <Inputs variant="Warning" icon="Search" />
                             </InputsForm>
                         </BoxInputsType>
 
                         <BoxInputsType variant="Transparent">
                             <SubTitleInput variant="h2"> Error</SubTitleInput>
                             <InputsForm>
-                                <Inputs variant="Error" />
-                                <Icons name="Search" variant="Outline" />
+                                <Inputs variant="Error" icon="Search" error={true} />
                             </InputsForm>
                         </BoxInputsType>
                     </InputStyleIcon>
@@ -235,21 +229,13 @@ INPUTS.args = {
     title:
         "Angelique Boyer con toda la mejor actitud en su regreso triunfal a Tik Tok por segunda vez",
     icon: "Buscar",
-    size: "50",
+    iconsize: 50,
 };
 
 INPUTS.argTypes = {
-    size: {
-        control: {
-            type: "range",
-            min: 0,
-            max: 100,
-        },
-        description: "Input size",
-        defaultValue: 0,
-        table: {
-            defaultValue: { summary: 0 },
-        },
+    iconsize: {
+        control: "number",
+        description: "Icon Size",
     },
     title: {
         control: "text",

@@ -1,5 +1,4 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import HomeCategory from "../../lib/contentTypes/HomeCategory";
@@ -7,7 +6,6 @@ import HomeCategory from "../../lib/contentTypes/HomeCategory";
 import Mock from "./imageMock.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Template/Homecategory",
 };
 

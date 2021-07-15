@@ -2,7 +2,12 @@ import { Meta, Story, ArgsTable } from "@storybook/addon-docs/blocks";
 import EjemploMobil from "../assets/EjemploMobil.png";
 import EjemploDesktop from "../assets/EjemploDesktop.png";
 
-<Meta title="Modal" />
+<Meta title="Modal" 
+  parameters={{
+        viewMode: 'docs',
+        previewTabs: { canvas: { hidden: true } },
+    }}
+/>
 
 <style>{`
   h1{

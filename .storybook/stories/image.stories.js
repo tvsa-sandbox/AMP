@@ -1,12 +1,10 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { withKnobs } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import { Image, Placeholder, Title, Box, Text } from "accessories";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Atoms/Images",
 };
 

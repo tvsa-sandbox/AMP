@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import ItemLeague from "../../lib/items/ItemLeague";
@@ -7,7 +6,6 @@ import ItemLeague from "../../lib/items/ItemLeague";
 import Mock from "./imageMock.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Items/ItemLeague",
 };
 

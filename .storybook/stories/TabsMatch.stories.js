@@ -1,19 +1,19 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import { Title } from "accessories";
 
 import TabsMatch from "../../lib/widgets/TabsMatch";
+import tabs from "../../lib/widgets/TabsMatch/tabs.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Widgets/TabsMatch",
+    component: TabsMatch,
 };
 
-export const TABSMATCH = () => {
+export const TABSMATCH = args => {
     return (
         <div>
             <Title variant="h2">TabsMatch</Title>
-            <TabsMatch />
+            <TabsMatch sections={tabs} {...args} />
         </div>
     );
 };

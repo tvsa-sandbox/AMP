@@ -1,12 +1,10 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import Mock from "./imageMock.json";
 import GalleryPWA from "../../lib/contentTypes/PWA/GalleryPWA";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/TemplatePWA/CTGalleryPWA",
 };
 

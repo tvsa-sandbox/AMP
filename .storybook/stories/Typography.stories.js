@@ -1,11 +1,9 @@
 import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
-import { withKnobs, text } from "@storybook/addon-knobs";
 
 import { Title, Text, Box, Info, Time, Anchor } from "accessories";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Atoms/Typography",
 };
 
@@ -148,12 +146,12 @@ const TextContainer = styled(Box)(
 );
 
 export const TITLE = args => {
-    const name = text("Titulo", "Title");
-    const namelabel = text("Etiqueta", "Label");
-    const namecounter = text("Counter", "10/15");
-    const nameinfo = text("Info", "Author: José de Jesus");
-    const nameair = text("Airtime", "July 28 ,2020");
-    const nameduration = text("Duration", "24:00");
+    // const name = text("Titulo", "Title");
+    // const namelabel = text("Etiqueta", "Label");
+    // const namecounter = text("Counter", "10/15");
+    // const nameinfo = text("Info", "Author: José de Jesus");
+    // const nameair = text("Airtime", "July 28 ,2020");
+    // const nameduration = text("Duration", "24:00");
     return (
         <BoxTypography variant="Transparent">
             <FontContainer variant="Transparent">
@@ -233,35 +231,35 @@ export const TITLE = args => {
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Info</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Info>{nameinfo}</Info>
+                            <Info>{args.nameinfo}</Info>
                         </BoxText>
                     </BoxStyle>
 
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Airtime</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Time variant="Airtime">{nameair}</Time>
+                            <Time variant="Airtime">{args.nameair}</Time>
                         </BoxText>
                     </BoxStyle>
 
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Duration</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Time variant="Duration">{nameduration}</Time>
+                            <Time variant="Duration">{args.nameduration}</Time>
                         </BoxText>
                     </BoxStyle>
 
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Counter</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Time>{namecounter}</Time>
+                            <Time>{args.namecounter}</Time>
                         </BoxText>
                     </BoxStyle>
 
                     <BoxStyle variant="Transparent">
                         <SubTitleText variant="h2">Label</SubTitleText>
                         <BoxText variant="Transparent">
-                            <Text variant="Label">{namelabel}</Text>
+                            <Text variant="Label">{args.namelabel}</Text>
                         </BoxText>
                     </BoxStyle>
                 </TypographyContainer>
@@ -273,6 +271,12 @@ export const TITLE = args => {
 TITLE.args = {
     children: "Title H",
     variant: "h1",
+    name: "Title",
+    namelabel: "Label",
+    namecounter: "10/15",
+    nameinfo: "Author: José de Jesus",
+    nameair: "July 28 ,2020",
+    nameduration: "24:00",
 };
 TITLE.argTypes = {
     children: { control: "text" },
@@ -283,4 +287,10 @@ TITLE.argTypes = {
             options: ["h1", "h2", "h3", "h4", "h5", "h6"],
         },
     },
+    name: { control: "text" },
+    namelabel: { control: "text" },
+    namecounter: { control: "text" },
+    nameinfo: { control: "text" },
+    nameair: { control: "text" },
+    nameduration: { control: "text" },
 };

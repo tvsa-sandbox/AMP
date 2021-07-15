@@ -1,12 +1,10 @@
 import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
-import { withKnobs } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import { Title, Anchor, Box, Image, Carousel, Text } from "accessories";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Atoms/Carousel",
 };
 

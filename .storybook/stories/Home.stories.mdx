@@ -7,8 +7,14 @@ import typo from "../assets/Tech_Life_Remote.png";
 import inputs from "../assets/Tech_Life_Virtual_Reality.png";
 import aspect from "../assets/Tech-Life-MediaImg.png";
 import box from "../assets/Tech-Life-Mediabox.png";
+import SwitchToDocs from "../switchtoDocs.js";
 
-<Meta title="Home" />
+<Meta title="Home" 
+    parameters={{
+    viewMode: 'docs',
+    previewTabs: { canvas: { hidden: true } },
+  }}
+/>
 
 <style>{`
     h1{
@@ -77,50 +83,51 @@ import box from "../assets/Tech-Life-Mediabox.png";
 A Design System for business products. Creating an efficient and pleasant work experience.
 
 <>
+<SwitchToDocs/>
 <div class="Options">
-    <a class="OptionHome" href="/?path=/story/desing-system-atoms-color--color">
+    <a class="OptionHome" href="/docs/desing-system-atoms-color--color">
     <img class="imagen" src={colors} alt="Colors" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Colors</h3>
     </div>
     </a>
-    <a class="OptionHome" href="/?path=/story/desing-system-atoms-buttons--button">
+    <a class="OptionHome" href="/docs/desing-system-atoms-buttons--solid">
     <img class="imagen" src={button} alt="Buttons" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Buttons</h3>
     </div>
     </a>
-    <a class="OptionHome" href="/?path=/story/desing-system-atoms-typography--title">
+    <a class="OptionHome" href="/docs/desing-system-atoms-typography--title">
     <img class="imagen" src={typo} alt="Typography" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Typography</h3>
     </div>
     </a>
-    <a class="OptionHome" href="/?path=/story/space-grid--page">
+    <a class="OptionHome" href="/docs/space-grid--page">
     <img class="imagen" src={spaces} alt="Grid" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Space & Grid</h3>
     </div>
     </a>
-    <a class="OptionHome" href="/?path=/story/desing-system-atoms-inputs--inputs">
+    <a class="OptionHome" href="/docs/desing-system-atoms-inputs--inputs">
     <img class="imagen" src={inputs} alt="Input" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Input Field</h3>
     </div>
     </a>
-    <a class="OptionHome" href="/?path=/story/desing-system-atoms-icons--icons">
+    <a class="OptionHome" href="/docs/desing-system-atoms-icons--icons">
     <img class="imagen" src={icons} alt="Icons" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Icons</h3>
     </div>
     </a>
-    <a class="OptionHome" href="/?path=/story/image--page">
+    <a class="OptionHome" href="/docs/image--page">
     <img class="imagen" src={aspect} alt="Aspect" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Image</h3>
     </div>
     </a>
-    <a class="OptionHome" href="/?path=/story/desing-system-atoms-box--box">
+    <a class="OptionHome" href="/docs/desing-system-atoms-box--box">
     <img class="imagen" src={box} alt="Box" />
     <div class="OptionCaption">
     <h3 class="OptionTitle">Box</h3>

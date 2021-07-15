@@ -1,12 +1,10 @@
 import React from "react";
-import { withKnobs } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title } from "../../lib/accessories";
 import Ticker from "../../lib/widgets/Ticker";
 import Mock from "./imageMock.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/TUDN/Ticker",
 };
 

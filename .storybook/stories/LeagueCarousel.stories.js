@@ -1,11 +1,9 @@
 import React, { Fragment } from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title, Box } from "accessories";
 import { LeagueCarousel } from "widgets";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Widgets/LeagueCarousel",
 };
 import Mock from "./imageMock.json";

@@ -1,5 +1,4 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title } from "accessories";
 
@@ -8,8 +7,8 @@ import EnhancementImage from "../../lib/widgets/EnhancementImage";
 import Mock from "./imageMock.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/enhancement/EnhancementImage",
+    component: EnhancementImage,
 };
 
 export const ENHANCEMENTIMAGE = args => {
@@ -26,13 +25,11 @@ export const ENHANCEMENTIMAGE = args => {
         desktop: {},
         mobile: IMG[0],
     };
-    const props = () => ({
-        title: text("Titulo", "Titulo de test"),
-    });
+
     return (
         <div>
             <Title variant="h2">Enhancement Image</Title>
-            <EnhancementImage ratio={aspect} src={SRC} {...props} />;
+            <EnhancementImage ratio={aspect} src={SRC} />;
         </div>
     );
 };

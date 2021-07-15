@@ -1,5 +1,4 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title } from "accessories";
 
@@ -9,7 +8,6 @@ import Mock from "./imageMock.json";
 import matchHeader from "../../lib/widgets/MatchHeader/matchHeader.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/TUDN/MatchHeader",
 };
 
@@ -27,13 +25,11 @@ export const MATCHHEADER = args => {
         desktop: {},
         mobile: IMG[0],
     };
-    const props = () => ({
-        title: text("Titulo", "Titulo de test"),
-    });
+
     return (
         <div>
             <Title variant="h2">MatchHeader</Title>
-            <MatchHeader ratio={aspect} src={SRC} matchs={matchHeader} {...props} />
+            <MatchHeader ratio={aspect} src={SRC} matchs={matchHeader} />
         </div>
     );
 };

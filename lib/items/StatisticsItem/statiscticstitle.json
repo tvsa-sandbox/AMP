@@ -1,0 +1,38 @@
+[
+    {  
+      "id":0,
+            "title": "POS"
+    },
+    {  
+        "id":1,
+              "title": "PTS"
+      },
+      {  
+        "id":2,
+              "title": "PLY"
+      },
+      {  
+        "id":3,
+              "title": "WIN"
+      },
+      {  
+        "id":4,
+              "title": "DRW"
+      },
+      {  
+        "id":5,
+              "title": "LTS"
+      },
+      {  
+        "id":6,
+              "title": "GSC"
+      },
+      {  
+        "id":7,
+              "title": "GCC"
+      },
+      {  
+        "id":8,
+              "title": "DIF"
+      }
+  ]

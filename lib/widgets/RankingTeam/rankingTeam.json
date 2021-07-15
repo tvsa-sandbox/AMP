@@ -1,0 +1,62 @@
+[
+    {  
+      "id":0,
+      "position": "1",
+      "team": "Toluca",
+      "number": "26"
+    },
+    {  
+        "id":1,
+        "position": "2=",
+        "team": "América",
+        "number": "25"
+      },
+      {  
+        "id":2,
+        "position": "2=",
+        "team": "Cruz Azul",
+        "number": "25"
+      },
+      {  
+        "id":3,
+        "position": "2= ",
+        "team": "Puebla",
+        "number": "25"
+      },
+      {  
+        "id":4,
+        "position": "5",
+        "team": "León",
+        "number": "23 "
+      },
+      {  
+        "id":5,
+        "position": "6=",
+        "team": "Guadalajara",
+        "number": "21"
+      },
+      {  
+        "id":6,
+        "position": "6=",
+        "team": "Monterrey  ",
+        "number": "21"
+      },
+      {  
+        "id":7,
+        "position": "8=",
+        "team": "Atlético San Luis",
+        "number": "19"
+      },
+      {  
+        "id":8,
+        "position": "8=",
+        "team": "Mazatlán",
+        "number": "19"
+      },
+      {  
+        "id":9,
+        "position": "8=",
+        "team": "Tigres",
+        "number": "19"  
+      }
+  ]

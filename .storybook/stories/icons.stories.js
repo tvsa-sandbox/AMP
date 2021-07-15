@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
+import { ThemeContext } from "styled-components";
 import styled, { css } from "styled-components";
-// import { withKnobs, text, select } from "@storybook/addon-knobs";
 
 import { Icons, Title, IconDuration, Box, Text, Info } from "accessories";
 
@@ -27,32 +27,31 @@ import iconSetVD from "../../lib/accessories/Icons/selectionvideodigital.json";
 import iconSetWL from "../../lib/accessories/Icons/selectionwhitelabel.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Atoms/Icons",
 };
 
 const iconlist = {
-    "Las Estrellas": iconSetLe.icons,
-    TUDN: iconSetTudn.icons,
-    Bandamax: iconSetBdx.icons,
-    "Canal 5": iconSetC5.icons,
-    "El Nueve": iconSetC9.icons,
-    Telehit: iconSetTht.icons,
-    Unicable: iconSetUnc.icons,
-    "White Label": iconSetWL.icons,
-    "Los Pleyers": iconSetPlyr.icons,
-    "Plumas Atomicas": iconSetPlm.icons,
-    Erizos: iconSetEzs.icons,
-    Bitme: iconSetBit.icons,
-    "Codigo Espagueti": iconSetCodE.icons,
-    "Frente Creativo": iconSetFrC.icons,
-    "Oink Oink": iconSetOink.icons,
-    "Viviendo Casa": iconSetVc.icons,
-    "Distrito Comedia": iconSetDc.icons,
-    TelevisaCom: iconSetTvsa.icons,
-    Slang: iconSetSl.icons,
-    "Televisa News": iconSetNews.icons,
-    "Video Digital": iconSetVD.icons,
+    lasEstrellas: iconSetLe,
+    tudn: iconSetTudn,
+    bandamax: iconSetBdx,
+    canal5: iconSetC5,
+    elnueve: iconSetC9,
+    telehit: iconSetTht,
+    unicable: iconSetUnc,
+    whitelabel: iconSetWL,
+    pleyers: iconSetPlyr,
+    plumasatomicas: iconSetPlm,
+    erizos: iconSetEzs,
+    bitme: iconSetBit,
+    codigoespagueti: iconSetCodE,
+    frentecreativo: iconSetFrC,
+    oinkoink: iconSetOink,
+    viviendoencasa: iconSetVc,
+    distritocomedia: iconSetDc,
+    televisacom: iconSetTvsa,
+    slang: iconSetSl,
+    televisanews: iconSetNews,
+    videodigital: iconSetVD,
 };
 
 const BoxIcons = styled(Box)(
@@ -173,9 +172,11 @@ const IconsStyle = styled(Box)(
 );
 
 export const ICONS = args => {
-    // const KEY = Object.keys(select("Iconos", iconlist, iconlist["Las Estrellas"]));
-    // const Iconame = select("Iconos", iconlist, iconlist["Las Estrellas"]);
-    // const name = text("Duration", "12:30");
+    const themeContext = useContext(ThemeContext);
+    const ui = themeContext.ui.name;
+    let IconSet = iconlist[ui];
+    const Iconame = IconSet.icons;
+    const KEY = Object.keys(Iconame);
     return (
         <Fragment>
             <BoxIcons variant="Transparent">
@@ -187,40 +188,41 @@ export const ICONS = args => {
                     </CaptionIcons>
                 </IconsDescription>
                 <IconsContainer variant="Transparent">
-                    <Icons {...args} />
-                    {/* {KEY.map(key => (
+                    {KEY.map(key => (
                         <IconsBox variant="Transparent" key={key}>
                             <IconsStyle variant="Transparent">
-                                <Icons name={Iconame[key].properties.name} {...args} />
+                                <Icons
+                                    iconSet={IconSet}
+                                    name={Iconame[key].properties.name}
+                                    {...args}
+                                />
                             </IconsStyle>
                             <IconsInfo>{Iconame[key].properties.name}</IconsInfo>
                         </IconsBox>
-                    ))} */}
+                    ))}
                 </IconsContainer>
             </BoxIcons>
-            {/* <BoxIcons variant="Transparent">
+            <BoxIcons variant="Transparent">
                 <IconsDescription variant="Transparent">
                     <TitleIcons variant="h1">Icon Duration</TitleIcons>
                     <CaptionIcons>Duration time icon.</CaptionIcons>
                 </IconsDescription>
                 <IconsDurationStyle variant="Transparent">
-                    <IconDuration>{name}</IconDuration>
+                    <IconDuration>12:30</IconDuration>
                 </IconsDurationStyle>
-            </BoxIcons> */}
+            </BoxIcons>
         </Fragment>
     );
 };
 ICONS.args = {
-    // icons: "Active",
-    name: "search",
+    variant: "Transparent",
 };
 ICONS.argTypes = {
-    // icons: {
-    //     description: "Iconos",
-    //     control: {
-    //         type: "select",
-    //         options: ["Active", "Focus"],
-    //     },
-    // },
-    name: { control: "text" },
+    variant: {
+        description: "Iconos",
+        control: {
+            type: "select",
+            options: ["Active", "Focus", "Solid", "Transparent", "Outline", "Footer"],
+        },
+    },
 };

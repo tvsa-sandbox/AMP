@@ -1,0 +1,22 @@
+[
+      {  
+          "id":0,
+                "title": "Goles Concedidos"
+        },
+        {  
+          "id":1,
+                "title": " Pases"
+        },
+        {  
+          "id":2,
+                "title": "Faltas Cometidas"
+        },
+        {  
+          "id":3,
+                "title": "Tarjetas Amarillas"
+        },
+        {  
+            "id":3,
+                  "title": "Tarjetas Rojas"
+          }
+    ]

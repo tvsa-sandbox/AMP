@@ -1,5 +1,4 @@
 import React from "react";
-import { withKnobs } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import GridGalleryOpen from "../../lib/widgets/GridGalleryOpen";
@@ -7,7 +6,6 @@ import Mock from "./imageMock-le.json";
 import slides from "../../lib/mocks/Mockup.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/enhancement/GridGalleryOpen",
 };
 

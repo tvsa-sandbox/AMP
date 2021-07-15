@@ -1,5 +1,4 @@
 import React from "react";
-import { withKnobs } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 import { Title } from "accessories";
 
@@ -8,7 +7,6 @@ import CarouselSports from "../../lib/widgets/CarouselSports";
 import carouselSports from "../../lib/widgets/CarouselSports/carouselSports.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/TUDN/CarouselSports",
 };
 
@@ -32,13 +30,10 @@ export const CAROSUELSPORTS = args => {
         desktop: {},
         mobile: IMG[0],
     };
-    const props = () => ({
-        title: text("Titulo", "Titulo de test"),
-    });
     return (
         <div>
             <Title variant="h2">CarouselSports</Title>
-            <CarouselSports ratio={aspect} src={SRC} sports={carouselSports} {...props} />
+            <CarouselSports ratio={aspect} src={SRC} sports={carouselSports} />
         </div>
     );
 };

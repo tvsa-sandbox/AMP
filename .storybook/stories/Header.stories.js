@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { withKnobs } from "@storybook/addon-knobs";
 import { Title } from "accessories";
 
 import HeaderAMP from "../../lib/widgets/Header/HeaderAMP";
@@ -7,7 +6,6 @@ import Layout from "../../lib/layout";
 import socialmedia from "../../lib/widgets/Header/social.json";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Widgets/Header",
 };
 

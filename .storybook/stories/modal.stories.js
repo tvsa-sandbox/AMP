@@ -1,10 +1,8 @@
 import React, { Fragment } from "react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import { Modal, Box, Text } from "../../lib/accessories";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Atoms/Modal",
 };
 

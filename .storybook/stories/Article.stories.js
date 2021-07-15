@@ -1,12 +1,11 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import Utils from "@televisadigital/nxtv-utilities";
 
 import Article from "../../lib/contentTypes/Article";
 
 export default {
-    decorators: [withKnobs],
     title: "Desing System/Template/Article",
+    component: Article,
 };
 
 import Mock from "./imageMock-le.json";
