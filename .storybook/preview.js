@@ -1,6 +1,5 @@
 import React from "react";
 // import { withKnobs, select } from "@storybook/addon-knobs";
-import { withHTML } from "@whitespace/storybook-addon-html/react";
 import { withAmpDecorator } from "storybook-amp";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { ThemeProvider } from "styled-components";
@@ -27,9 +26,6 @@ import * as distrito from "../lib/themes/distritocomedia";
 import * as slang from "../lib/themes/slang";
 import * as feeds from "../lib/themes/feeds";
 import GlobalStyle from "../lib/accessories/GlobalStyles";
-import merge from "lodash.merge";
-import get from "lodash.get";
-import css from "./styles";
 
 const wl = whiteLabel;
 const le = lasEstrellas;
@@ -121,7 +117,6 @@ const withThemeProvider = (Story, context) => {
 export const parameters = {
     amp: {
         isEnabled: true,
-        styles: customStyles, // Custom styles from some string
     },
     viewMode: "docs",
     viewport: {
@@ -136,4 +131,4 @@ export const parameters = {
     },
 };
 
-export const decorators = [withHTML, withThemeProvider, withAmpDecorator];
+export const decorators = [ withThemeProvider, withAmpDecorator];
