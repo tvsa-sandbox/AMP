@@ -6,7 +6,7 @@
 
 </p>
 
-Desing System project for the TVSA sites syles. Front-end Styled Components framework for faster and easier web style development.
+Desing System AMP project for the TVSA sites syles. Front-end Styled Components framework for faster and easier web style development.
 
 ## 📖 Table of contents
 
